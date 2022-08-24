@@ -1,0 +1,12 @@
+C:\Users\pc\source\repos\ClinicSystem\ClinicSystem.Helper\bin\Debug\net5.0\ClinicSystem.Helper.deps.json
+C:\Users\pc\source\repos\ClinicSystem\ClinicSystem.Helper\bin\Debug\net5.0\ClinicSystem.Helper.dll
+C:\Users\pc\source\repos\ClinicSystem\ClinicSystem.Helper\bin\Debug\net5.0\ref\ClinicSystem.Helper.dll
+C:\Users\pc\source\repos\ClinicSystem\ClinicSystem.Helper\bin\Debug\net5.0\ClinicSystem.Helper.pdb
+C:\Users\pc\source\repos\ClinicSystem\ClinicSystem.Helper\obj\Debug\net5.0\ClinicSystem.Helper.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\pc\source\repos\ClinicSystem\ClinicSystem.Helper\obj\Debug\net5.0\ClinicSystem.Helper.AssemblyInfoInputs.cache
+C:\Users\pc\source\repos\ClinicSystem\ClinicSystem.Helper\obj\Debug\net5.0\ClinicSystem.Helper.AssemblyInfo.cs
+C:\Users\pc\source\repos\ClinicSystem\ClinicSystem.Helper\obj\Debug\net5.0\ClinicSystem.Helper.csproj.CoreCompileInputs.cache
+C:\Users\pc\source\repos\ClinicSystem\ClinicSystem.Helper\obj\Debug\net5.0\ClinicSystem.Helper.dll
+C:\Users\pc\source\repos\ClinicSystem\ClinicSystem.Helper\obj\Debug\net5.0\ref\ClinicSystem.Helper.dll
+C:\Users\pc\source\repos\ClinicSystem\ClinicSystem.Helper\obj\Debug\net5.0\ClinicSystem.Helper.pdb
+C:\Users\pc\source\repos\ClinicSystem\ClinicSystem.Helper\obj\Debug\net5.0\ClinicSystem.Helper.csproj.AssemblyReference.cache

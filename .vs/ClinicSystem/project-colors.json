@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "b9040f4c-2134-47f0-8006-0f0bfed74f75": {
+      "ProjectGuid": "b9040f4c-2134-47f0-8006-0f0bfed74f75",
+      "DisplayName": "ClinicSystem.DAL",
+      "ColorIndex": 0
+    },
+    "962c9b37-70e3-4080-b0a5-f5f28874d2d0": {
+      "ProjectGuid": "962c9b37-70e3-4080-b0a5-f5f28874d2d0",
+      "DisplayName": "ClinicSystem.Helper",
+      "ColorIndex": 1
+    }
+  },
+  "NextColorIndex": 2
+}
