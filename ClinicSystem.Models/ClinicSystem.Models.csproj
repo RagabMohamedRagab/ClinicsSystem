@@ -8,4 +8,8 @@
     <ProjectReference Include="..\ClinicSystem.Helper\ClinicSystem.Helpers.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="5.0.1" />
+  </ItemGroup>
+
 </Project>

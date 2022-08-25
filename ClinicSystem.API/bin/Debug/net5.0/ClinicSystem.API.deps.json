@@ -33,7 +33,10 @@
     ".NETCoreApp,Version=v5.0": {
       "ClinicSystem.API/1.0.0": {
         "dependencies": {
+          "AutoMapper.Extensions.Microsoft.DependencyInjection": "5.0.1",
+          "ClinicSystem.BOL": "1.0.0",
           "ClinicSystem.DAL": "1.0.0",
+          "ClinicSystem.UnitOfWork": "1.0.0",
           "Microsoft.EntityFrameworkCore": "5.0.17",
           "Microsoft.EntityFrameworkCore.Design": "5.0.17",
           "Swashbuckle.AspNetCore": "5.6.3",
@@ -299,7 +302,7 @@
           "System.Threading.Timer": "5.0.0.0",
           "System.Transactions": "4.0.0.0",
           "System.Transactions.Local": "5.0.0.0",
-          "System.ValueTuple": "4.0.3.0",
+          "System.ValueTuple.Reference": "4.0.3.0",
           "System.Web": "4.0.0.0",
           "System.Web.HttpUtility": "5.0.0.0",
           "System.Windows": "4.0.0.0",
@@ -320,6 +323,35 @@
         },
         "compile": {
           "ClinicSystem.API.dll": {}
+        }
+      },
+      "AutoMapper/7.0.1": {
+        "dependencies": {
+          "System.ValueTuple": "4.5.0"
+        },
+        "runtime": {
+          "lib/netcoreapp2.0/AutoMapper.dll": {
+            "assemblyVersion": "7.0.1.0",
+            "fileVersion": "7.0.1.0"
+          }
+        },
+        "compile": {
+          "lib/netcoreapp2.0/AutoMapper.dll": {}
+        }
+      },
+      "AutoMapper.Extensions.Microsoft.DependencyInjection/5.0.1": {
+        "dependencies": {
+          "AutoMapper": "7.0.1",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "5.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll": {
+            "assemblyVersion": "0.0.0.0",
+            "fileVersion": "5.0.1.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll": {}
         }
       },
       "Humanizer.Core/2.8.26": {
@@ -1500,6 +1532,7 @@
           "System.Threading.Tasks": "4.3.0"
         }
       },
+      "System.ValueTuple/4.5.0": {},
       "System.Windows.Extensions/4.7.0": {
         "dependencies": {
           "System.Drawing.Common": "4.7.0"
@@ -1575,9 +1608,20 @@
           "System.Xml.XmlDocument": "4.3.0"
         }
       },
+      "ClinicSystem.BOL/1.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "5.0.17"
+        },
+        "runtime": {
+          "ClinicSystem.BOL.dll": {}
+        },
+        "compile": {
+          "ClinicSystem.BOL.dll": {}
+        }
+      },
       "ClinicSystem.DAL/1.0.0": {
         "dependencies": {
-          "ClinicSystem.Helper": "1.0.0",
+          "ClinicSystem.Helpers": "1.0.0",
           "Microsoft.AspNetCore.Identity": "2.2.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "5.0.17",
           "Microsoft.EntityFrameworkCore": "5.0.17",
@@ -1592,12 +1636,23 @@
           "ClinicSystem.DAL.dll": {}
         }
       },
-      "ClinicSystem.Helper/1.0.0": {
+      "ClinicSystem.Helpers/1.0.0": {
         "runtime": {
-          "ClinicSystem.Helper.dll": {}
+          "ClinicSystem.Helpers.dll": {}
         },
         "compile": {
-          "ClinicSystem.Helper.dll": {}
+          "ClinicSystem.Helpers.dll": {}
+        }
+      },
+      "ClinicSystem.UnitOfWork/1.0.0": {
+        "dependencies": {
+          "ClinicSystem.DAL": "1.0.0"
+        },
+        "runtime": {
+          "ClinicSystem.UnitOfWork.dll": {}
+        },
+        "compile": {
+          "ClinicSystem.UnitOfWork.dll": {}
         }
       },
       "Microsoft.AspNetCore.Antiforgery/5.0.0.0": {
@@ -3172,7 +3227,7 @@
         },
         "compileOnly": true
       },
-      "System.ValueTuple/4.0.3.0": {
+      "System.ValueTuple.Reference/4.0.3.0": {
         "compile": {
           "System.ValueTuple.dll": {}
         },
@@ -3269,6 +3324,20 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "AutoMapper/7.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-6xHbhsW09sWjjYuE1sqhYn25PQzB6UEUVPME5uhlaIz2NR2+L3+FGbVxvknJKug1BLp6VTLxDb5RcGXKMm0ieQ==",
+      "path": "automapper/7.0.1",
+      "hashPath": "automapper.7.0.1.nupkg.sha512"
+    },
+    "AutoMapper.Extensions.Microsoft.DependencyInjection/5.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-7MIq6D/ax3964iHXbL1L2ldUvl6IlKp0p1GZFzr6vlIhEVyp4CgJwOpisRLvIO7dP+kDtbY3Hb9yuPNCkfyBFg==",
+      "path": "automapper.extensions.microsoft.dependencyinjection/5.0.1",
+      "hashPath": "automapper.extensions.microsoft.dependencyinjection.5.0.1.nupkg.sha512"
     },
     "Humanizer.Core/2.8.26": {
       "type": "package",
@@ -4145,6 +4214,13 @@
       "path": "system.threading.tasks.extensions/4.3.0",
       "hashPath": "system.threading.tasks.extensions.4.3.0.nupkg.sha512"
     },
+    "System.ValueTuple/4.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-okurQJO6NRE/apDIP23ajJ0hpiNmJ+f0BwOlB/cSqTLQlw5upkf+5+96+iG2Jw40G1fCVCyPz/FhIABUjMR+RQ==",
+      "path": "system.valuetuple/4.5.0",
+      "hashPath": "system.valuetuple.4.5.0.nupkg.sha512"
+    },
     "System.Windows.Extensions/4.7.0": {
       "type": "package",
       "serviceable": true,
@@ -4180,12 +4256,22 @@
       "path": "system.xml.xmlserializer/4.3.0",
       "hashPath": "system.xml.xmlserializer.4.3.0.nupkg.sha512"
     },
+    "ClinicSystem.BOL/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "ClinicSystem.DAL/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "ClinicSystem.Helper/1.0.0": {
+    "ClinicSystem.Helpers/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ClinicSystem.UnitOfWork/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -5500,7 +5586,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "System.ValueTuple/4.0.3.0": {
+    "System.ValueTuple.Reference/4.0.3.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""

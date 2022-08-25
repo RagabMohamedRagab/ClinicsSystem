@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "aXSdlQRNZgAw+rNuB9Tg/MUbJZPNdqfUGPh9RJMI/Pbx9IBSoDh5oU6pQnMu4hDUUVIG8JdtjoHtQsH3VQ4p+g==",
+  "dgSpecHash": "AHn7W4QNYWCC2VULVAY5Lv6a4VIZIqRUIpoB4aPO25B3ntq0IvG53oqcI3YATapObEx2Q2wrXJMUX62SqX2x4A==",
   "success": true,
   "projectFilePath": "C:\\Users\\pc\\Desktop\\New folder\\ClinicSystem.Models\\ClinicSystem.Models.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\pc\\.nuget\\packages\\automapper\\7.0.1\\automapper.7.0.1.nupkg.sha512",
+    "C:\\Users\\pc\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\5.0.1\\automapper.extensions.microsoft.dependencyinjection.5.0.1.nupkg.sha512",
+    "C:\\Users\\pc\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\2.0.0\\microsoft.extensions.dependencyinjection.abstractions.2.0.0.nupkg.sha512",
+    "C:\\Users\\pc\\.nuget\\packages\\system.valuetuple\\4.5.0\\system.valuetuple.4.5.0.nupkg.sha512"
+  ],
   "logs": []
 }

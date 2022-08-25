@@ -8,7 +8,7 @@
     ".NETCoreApp,Version=v5.0": {
       "ClinicSystem.DAL/1.0.0": {
         "dependencies": {
-          "ClinicSystem.Helper": "1.0.0",
+          "ClinicSystem.Helpers": "1.0.0",
           "Microsoft.AspNetCore.Identity": "2.2.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "5.0.17",
           "Microsoft.EntityFrameworkCore": "5.0.17",
@@ -1405,9 +1405,9 @@
           "System.Xml.XmlDocument": "4.3.0"
         }
       },
-      "ClinicSystem.Helper/1.0.0": {
+      "ClinicSystem.Helpers/1.0.0": {
         "runtime": {
-          "ClinicSystem.Helper.dll": {}
+          "ClinicSystem.Helpers.dll": {}
         }
       }
     }
@@ -2293,7 +2293,7 @@
       "path": "system.xml.xmlserializer/4.3.0",
       "hashPath": "system.xml.xmlserializer.4.3.0.nupkg.sha512"
     },
-    "ClinicSystem.Helper/1.0.0": {
+    "ClinicSystem.Helpers/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

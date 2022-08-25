@@ -1,5 +1,7 @@
+using AutoMapper;
 using ClinicSystem.DAL.Context;
 using ClinicSystem.DAL.Domains;
+using ClinicSystem.UnitOfWork;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -29,6 +31,7 @@ namespace ClinicSystem.API {
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.AddAutoMapper(typeof(Startup));
             services.AddDbContext<ClinicDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("Clinic")));
             services.AddIdentity<ApplicationUser, IdentityRole>().AddEntityFrameworkStores<ClinicDbContext>().AddDefaultTokenProviders();
             services.AddSwaggerGen(c =>
@@ -39,6 +42,8 @@ namespace ClinicSystem.API {
                    Description="Clinics",
                 });
             });
+            services.AddTransient<IUnitOfWorkPattern, UnitOfWorkPattern>();
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

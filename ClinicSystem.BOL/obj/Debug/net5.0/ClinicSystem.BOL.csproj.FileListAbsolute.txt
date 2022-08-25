@@ -1,0 +1,11 @@
+C:\Users\pc\Desktop\New folder\ClinicSystem.BOL\bin\Debug\net5.0\ClinicSystem.BOL.deps.json
+C:\Users\pc\Desktop\New folder\ClinicSystem.BOL\bin\Debug\net5.0\ClinicSystem.BOL.dll
+C:\Users\pc\Desktop\New folder\ClinicSystem.BOL\bin\Debug\net5.0\ref\ClinicSystem.BOL.dll
+C:\Users\pc\Desktop\New folder\ClinicSystem.BOL\bin\Debug\net5.0\ClinicSystem.BOL.pdb
+C:\Users\pc\Desktop\New folder\ClinicSystem.BOL\obj\Debug\net5.0\ClinicSystem.BOL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\pc\Desktop\New folder\ClinicSystem.BOL\obj\Debug\net5.0\ClinicSystem.BOL.AssemblyInfoInputs.cache
+C:\Users\pc\Desktop\New folder\ClinicSystem.BOL\obj\Debug\net5.0\ClinicSystem.BOL.AssemblyInfo.cs
+C:\Users\pc\Desktop\New folder\ClinicSystem.BOL\obj\Debug\net5.0\ClinicSystem.BOL.csproj.CoreCompileInputs.cache
+C:\Users\pc\Desktop\New folder\ClinicSystem.BOL\obj\Debug\net5.0\ClinicSystem.BOL.dll
+C:\Users\pc\Desktop\New folder\ClinicSystem.BOL\obj\Debug\net5.0\ref\ClinicSystem.BOL.dll
+C:\Users\pc\Desktop\New folder\ClinicSystem.BOL\obj\Debug\net5.0\ClinicSystem.BOL.pdb
