@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace ClinicSystem.UnitOfWork {
-    internal class Class1 {
+    public  interface IUnitOfWork:IDisposable {
+        int Commit();
     }
 }

@@ -1854,6 +1854,16 @@
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
       },
+      "ClinicSystem.BOL/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/ClinicSystem.BOL.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ClinicSystem.BOL.dll": {}
+        }
+      },
       "ClinicSystem.DAL/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
@@ -1887,8 +1897,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
-          "ClinicSystem.DAL": "1.0.0",
-          "ClinicSystem.Helpers": "1.0.0"
+          "ClinicSystem.BOL": "1.0.0",
+          "ClinicSystem.DAL": "1.0.0"
         },
         "compile": {
           "bin/placeholder/ClinicSystem.Repositories.dll": {}
@@ -1900,6 +1910,9 @@
       "ClinicSystem.UnitOfWork/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "ClinicSystem.DAL": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/ClinicSystem.UnitOfWork.dll": {}
         },
@@ -6560,6 +6573,11 @@
         "system.xml.xmlserializer.4.3.0.nupkg.sha512",
         "system.xml.xmlserializer.nuspec"
       ]
+    },
+    "ClinicSystem.BOL/1.0.0": {
+      "type": "project",
+      "path": "../ClinicSystem.BOL/ClinicSystem.BOL.csproj",
+      "msbuildProject": "../ClinicSystem.BOL/ClinicSystem.BOL.csproj"
     },
     "ClinicSystem.DAL/1.0.0": {
       "type": "project",
