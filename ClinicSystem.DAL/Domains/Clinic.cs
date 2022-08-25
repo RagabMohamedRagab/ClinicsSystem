@@ -7,11 +7,10 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace ClinicSystem.DAL.Domains {
-    public class Clinic:BaseModel {
+    public partial class Clinic:BaseModel {
         public Clinic()
         {
             ClinicImages=new HashSet<ClinicImage>();
-            ApplicationUsers=new HashSet<ApplicationUser>();
             ClinicServices = new HashSet<ClinicService>();
             Shifts=new HashSet<Shift>();
             Breaks = new HashSet<Break>();
@@ -40,7 +39,6 @@ namespace ClinicSystem.DAL.Domains {
         public string InstagramUrl { get; set; }
         public virtual ICollection<ClinicPackage>  ClinicPackages { get; set; }
         public virtual ICollection<ClinicImage> ClinicImages { get; set; }
-        public virtual ICollection<ApplicationUser> ApplicationUsers { get; set; }
         public virtual ICollection<ClinicService> ClinicServices { get; set; }
         public virtual ICollection<Shift> Shifts { get; set; }
         public virtual ICollection<Break> Breaks { get; set; }

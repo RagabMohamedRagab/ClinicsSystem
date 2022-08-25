@@ -22,7 +22,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ClinicSystem.Helper\ClinicSystem.Helper.csproj" />
+    <ProjectReference Include="..\ClinicSystem.Helper\ClinicSystem.Helpers.csproj" />
   </ItemGroup>
 
 </Project>

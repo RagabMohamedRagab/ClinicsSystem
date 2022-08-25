@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace ClinicSystem.DAL.Domains {
-    public class Drug :BaseModel{
+    public partial class Drug :BaseModel{
         [Required]
         public string  EnName { get; set; }
         [Required]

@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace ClinicSystem.DAL.Domains {
-    public class Service:BaseModel {
+    public partial class Service:BaseModel {
         public Service()
         {
             ServiceImages=new HashSet<ServiceImage>();

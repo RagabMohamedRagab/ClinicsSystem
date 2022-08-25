@@ -16,3 +16,21 @@ C:\Users\pc\source\repos\ClinicSystem\ClinicSystem.DAL\obj\Debug\net5.0\ClinicSy
 C:\Users\pc\source\repos\ClinicSystem\ClinicSystem.DAL\obj\Debug\net5.0\ref\ClinicSystem.DAL.dll
 C:\Users\pc\source\repos\ClinicSystem\ClinicSystem.DAL\obj\Debug\net5.0\ClinicSystem.DAL.pdb
 C:\Users\pc\source\repos\ClinicSystem\ClinicSystem.DAL\obj\Debug\net5.0\ClinicSystem.DAL.genruntimeconfig.cache
+C:\Users\pc\Desktop\New folder\ClinicSystem.DAL\bin\Debug\net5.0\ClinicSystem.DAL.deps.json
+C:\Users\pc\Desktop\New folder\ClinicSystem.DAL\bin\Debug\net5.0\ClinicSystem.DAL.runtimeconfig.json
+C:\Users\pc\Desktop\New folder\ClinicSystem.DAL\bin\Debug\net5.0\ClinicSystem.DAL.runtimeconfig.dev.json
+C:\Users\pc\Desktop\New folder\ClinicSystem.DAL\bin\Debug\net5.0\ClinicSystem.DAL.dll
+C:\Users\pc\Desktop\New folder\ClinicSystem.DAL\bin\Debug\net5.0\ref\ClinicSystem.DAL.dll
+C:\Users\pc\Desktop\New folder\ClinicSystem.DAL\bin\Debug\net5.0\ClinicSystem.DAL.pdb
+C:\Users\pc\Desktop\New folder\ClinicSystem.DAL\bin\Debug\net5.0\ClinicSystem.Helper.dll
+C:\Users\pc\Desktop\New folder\ClinicSystem.DAL\bin\Debug\net5.0\ClinicSystem.Helper.pdb
+C:\Users\pc\Desktop\New folder\ClinicSystem.DAL\obj\Debug\net5.0\ClinicSystem.DAL.csproj.AssemblyReference.cache
+C:\Users\pc\Desktop\New folder\ClinicSystem.DAL\obj\Debug\net5.0\ClinicSystem.DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\pc\Desktop\New folder\ClinicSystem.DAL\obj\Debug\net5.0\ClinicSystem.DAL.AssemblyInfoInputs.cache
+C:\Users\pc\Desktop\New folder\ClinicSystem.DAL\obj\Debug\net5.0\ClinicSystem.DAL.AssemblyInfo.cs
+C:\Users\pc\Desktop\New folder\ClinicSystem.DAL\obj\Debug\net5.0\ClinicSystem.DAL.csproj.CoreCompileInputs.cache
+C:\Users\pc\Desktop\New folder\ClinicSystem.DAL\obj\Debug\net5.0\ClinicSystem.DAL.csproj.CopyComplete
+C:\Users\pc\Desktop\New folder\ClinicSystem.DAL\obj\Debug\net5.0\ClinicSystem.DAL.dll
+C:\Users\pc\Desktop\New folder\ClinicSystem.DAL\obj\Debug\net5.0\ref\ClinicSystem.DAL.dll
+C:\Users\pc\Desktop\New folder\ClinicSystem.DAL\obj\Debug\net5.0\ClinicSystem.DAL.pdb
+C:\Users\pc\Desktop\New folder\ClinicSystem.DAL\obj\Debug\net5.0\ClinicSystem.DAL.genruntimeconfig.cache

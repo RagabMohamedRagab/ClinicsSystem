@@ -7,11 +7,12 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace ClinicSystem.DAL.Domains {
-    public class Patient : BaseModel {
+    public partial class Patient : BaseModel {
         public Patient()
         {
             Appointments=new HashSet<Appointment>();
             FoodSystems=new HashSet<FoodSystem>();
+            PatientDrugs=new HashSet<PatientDrug>();
         }
         [Required]
         public string FullName { get; set; }
@@ -31,6 +32,7 @@ namespace ClinicSystem.DAL.Domains {
         public virtual ICollection<Appointment> Appointments { get; set; } 
         public virtual ICollection<FoodSystem> FoodSystems { get; set; }
         public virtual ICollection<PatientDrug> PatientDrugs { get; set; }
+        public virtual ICollection<Ray> Rays { get; set; }
 
     }
 }

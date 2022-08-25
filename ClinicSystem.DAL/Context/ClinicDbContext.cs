@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace ClinicSystem.DAL.Context {
-    public class ClinicDbContext :IdentityDbContext<ApplicationUser>{
+    public partial class ClinicDbContext :IdentityDbContext<ApplicationUser>{
         public ClinicDbContext(DbContextOptions<ClinicDbContext> options):base(options){}
         
      public virtual DbSet<Appointment> Appointments { get; set; } 
@@ -30,6 +30,7 @@ namespace ClinicSystem.DAL.Context {
         public virtual DbSet<ServiceImage> ServiceImages { get; set; }
         public virtual DbSet<Shift> Shifts { get; set; }
         public virtual DbSet<VisitType> VisitTypes { get; set; }
+        public virtual DbSet<Ray> Rays { get; set; }
        
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace ClinicSystem.DAL.Domains {
-    public class Shift:BaseModel {
+    public partial class Shift:BaseModel {
         [Required]
         public string EnName { get; set; }
         [Required]

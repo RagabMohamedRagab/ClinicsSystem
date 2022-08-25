@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace ClinicSystem.DAL.Domains {
-    public class VisitType:BaseModel {
+    public partial class VisitType:BaseModel {
         public VisitType()
         {
             Appointments=new HashSet<Appointment>();

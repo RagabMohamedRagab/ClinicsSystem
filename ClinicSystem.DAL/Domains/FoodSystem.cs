@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace ClinicSystem.DAL.Domains {
-    public class FoodSystem:BaseModel {
+    public partial class FoodSystem:BaseModel {
         [Required]
         public string Protein { get; set; }
         [Required]

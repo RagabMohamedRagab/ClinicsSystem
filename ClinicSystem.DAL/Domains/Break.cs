@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace ClinicSystem.DAL.Domains {
-    public class Break:BaseModel {
+    public partial class Break:BaseModel {
         [Required]
         public string EnName { get; set; }
         [Required]

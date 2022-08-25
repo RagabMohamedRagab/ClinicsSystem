@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace ClinicSystem.DAL.Domains {
-    public class ApplicationUser : IdentityUser {
+    public partial class ApplicationUser : IdentityUser {
         public ApplicationUser()
         {
             Appointments = new HashSet<Appointment>();

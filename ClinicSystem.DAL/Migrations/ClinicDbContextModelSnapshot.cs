@@ -70,9 +70,6 @@ namespace ClinicSystem.DAL.Migrations
                     b.Property<int?>("CityId")
                         .HasColumnType("int");
 
-                    b.Property<int?>("ClinicId")
-                        .HasColumnType("int");
-
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken()
                         .HasColumnType("nvarchar(max)");
@@ -149,8 +146,6 @@ namespace ClinicSystem.DAL.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("CityId");
-
-                    b.HasIndex("ClinicId");
 
                     b.HasIndex("CountryId");
 
@@ -762,6 +757,43 @@ namespace ClinicSystem.DAL.Migrations
                     b.ToTable("PatientDrugs");
                 });
 
+            modelBuilder.Entity("ClinicSystem.DAL.Domains.Ray", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("ArName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CraetedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("EnName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime?>("ModifiedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int?>("PatientId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("PatientId");
+
+                    b.ToTable("Rays");
+                });
+
             modelBuilder.Entity("ClinicSystem.DAL.Domains.Service", b =>
                 {
                     b.Property<int>("Id")
@@ -815,6 +847,9 @@ namespace ClinicSystem.DAL.Migrations
 
                     b.Property<DateTime?>("ModifiedOn")
                         .HasColumnType("datetime2");
+
+                    b.Property<string>("Notes")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int?>("ServiceId")
                         .HasColumnType("int");
@@ -1051,10 +1086,6 @@ namespace ClinicSystem.DAL.Migrations
                         .WithMany("ApplicationUsers")
                         .HasForeignKey("CityId");
 
-                    b.HasOne("ClinicSystem.DAL.Domains.Clinic", null)
-                        .WithMany("ApplicationUsers")
-                        .HasForeignKey("ClinicId");
-
                     b.HasOne("ClinicSystem.DAL.Domains.Country", "Country")
                         .WithMany()
                         .HasForeignKey("CountryId");
@@ -1181,6 +1212,15 @@ namespace ClinicSystem.DAL.Migrations
                     b.Navigation("Patient");
                 });
 
+            modelBuilder.Entity("ClinicSystem.DAL.Domains.Ray", b =>
+                {
+                    b.HasOne("ClinicSystem.DAL.Domains.Patient", "Patient")
+                        .WithMany("Rays")
+                        .HasForeignKey("PatientId");
+
+                    b.Navigation("Patient");
+                });
+
             modelBuilder.Entity("ClinicSystem.DAL.Domains.ServiceImage", b =>
                 {
                     b.HasOne("ClinicSystem.DAL.Domains.Service", "Service")
@@ -1264,8 +1304,6 @@ namespace ClinicSystem.DAL.Migrations
 
             modelBuilder.Entity("ClinicSystem.DAL.Domains.Clinic", b =>
                 {
-                    b.Navigation("ApplicationUsers");
-
                     b.Navigation("AppUserClinics");
 
                     b.Navigation("Breaks");
@@ -1308,6 +1346,8 @@ namespace ClinicSystem.DAL.Migrations
                     b.Navigation("FoodSystems");
 
                     b.Navigation("PatientDrugs");
+
+                    b.Navigation("Rays");
                 });
 
             modelBuilder.Entity("ClinicSystem.DAL.Domains.Service", b =>

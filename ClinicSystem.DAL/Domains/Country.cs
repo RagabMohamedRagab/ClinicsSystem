@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace ClinicSystem.DAL.Domains {
-    public class Country:BaseModel {
+    public partial class Country:BaseModel {
         public Country()
         {
             Cities=new HashSet<City>();

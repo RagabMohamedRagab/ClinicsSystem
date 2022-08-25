@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace ClinicSystem.DAL.Domains {
-    public class PatientDrug:BaseModel {
+    public partial class PatientDrug:BaseModel {
         [ForeignKey(nameof(Patient))]
         public Nullable<int> PatientId { get; set; }
         public virtual Patient Patient { get; set; }

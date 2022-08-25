@@ -6,8 +6,9 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace ClinicSystem.DAL.Domains {
-    public class Appointment:BaseModel {
-      [ForeignKey(nameof(Patient))]
+    public partial class Appointment:BaseModel {
+    
+        [ForeignKey(nameof(Patient))]
         public Nullable<int> PatientId  { get; set;}
         public virtual Patient Patient { get; set;}
         [ForeignKey(nameof(User))]

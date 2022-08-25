@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace ClinicSystem.DAL.Domains {
-    public class BaseModel {
+    public partial class BaseModel {
         public BaseModel()
         {
             CraetedOn = DateTime.Now;
