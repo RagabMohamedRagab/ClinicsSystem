@@ -86,7 +86,26 @@ namespace ClinicSystem.BLL.Services {
             return responseObject;
         }
 
-        public ResponseObject GetALLDepart(string lan="en",int Pagesize=4,int Pagenumber = 1) 
+        public ResponseObject Find(string Name)
+        {
+            ResponseObject responseObject = new ResponseObject();
+            if (String.IsNullOrEmpty(Name))
+            {
+                responseObject.ErrorMessage = ErrorsCodes.ParameteresNotCorrect.ToString();
+                return null;
+            }
+              var depart=_department.Find(Name);
+            if(depart != null)
+            {
+                responseObject.ErrorMessage = ErrorsCodes.Success.ToString();
+                responseObject.Data = depart;
+                return responseObject;
+            }
+            responseObject.ErrorMessage = ErrorsCodes.InvalidObject.ToString();
+            return responseObject;
+        }
+
+        public ResponseObject GetALLDepart(string lan= "en", int Pagesize=4,int Pagenumber = 1) 
         {
             ResponseObject response = new ResponseObject();
             if (String.IsNullOrEmpty(lan)|| Pagenumber == 0 || Pagesize == 0)
@@ -95,7 +114,26 @@ namespace ClinicSystem.BLL.Services {
                 return response;
             }
            
-            var departments = _department.GetALLDepart();
+            var departments = _department.GetALLByLang(lan, Pagesize, Pagenumber);
+            if (departments == null)
+            {
+                response.ErrorMessage = ErrorsCodes.InvalidObject.ToString();
+                return response;
+            }
+            response.Data = departments;
+            return response;
+        }
+
+        public ResponseObject GetAllWithOutLang(int Pagesize = 4, int Pagenumber = 1)
+        {
+            ResponseObject response = new ResponseObject();
+            if ( Pagenumber == 0 || Pagesize == 0)
+            {
+                response.ErrorMessage = ErrorsCodes.ParameteresNotCorrect.ToString();
+                return response;
+            }
+
+            var departments = _department.GetAllWithOutLang(Pagesize, Pagenumber);
             if (departments == null)
             {
                 response.ErrorMessage = ErrorsCodes.InvalidObject.ToString();

@@ -12,5 +12,7 @@ namespace ClinicSystem.BOL.IServices {
         ResponseObject Update(int Id,DepartMentDTO dTO);
         ResponseObject Delete(int Id);
         ResponseObject GetALLDepart(string lang = "en", int Pagesize = 4, int Pagenumber = 1);
+        ResponseObject GetAllWithOutLang(int Pagesize = 4, int Pagenumber = 1);
+        ResponseObject Find(string Name);
     }
 }

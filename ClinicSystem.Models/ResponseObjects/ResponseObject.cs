@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ClinicSystem.Models.ResponseObjects {
     public class ResponseObject {
-        public object Data { get; set; }
+    
         private string ErrorCode = ErrorsCodes.Success.ToString();
         public string ErrorMessage {
             set
@@ -19,6 +19,8 @@ namespace ClinicSystem.Models.ResponseObjects {
                 return ErrorCode.ToString();
             }
         }
+        public object Data { get; set; }
+
     }
 
 }

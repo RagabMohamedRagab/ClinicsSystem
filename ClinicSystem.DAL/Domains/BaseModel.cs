@@ -17,6 +17,8 @@ namespace ClinicSystem.DAL.Domains {
         public DateTime CraetedOn { get; set; }
         [DataType(DataType.DateTime)]
         public Nullable<DateTime> ModifiedOn{get;set;}
+        [DataType(DataType.DateTime)]
+        public  Nullable<DateTime> DeletedOn { get; set; }
         public bool IsDeleted { get; set; }
 
     }

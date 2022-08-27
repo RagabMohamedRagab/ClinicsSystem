@@ -21,10 +21,17 @@ namespace ClinicSystem.API.Controllers {
             return Ok(result);
         }
         [HttpGet]
-        [Route("GetAll")]
-        public IActionResult GetAll(string lang="en",int Pagesize=4,int Pagenumber=1)
+        [Route("GetAllByLang")]
+        public IActionResult GetAllByLang(string lang="en",int Pagesize=4,int Pagenumber=1)
         {
             var result = _departService.GetALLDepart(lang, Pagesize, Pagenumber);
+            return Ok(result);
+        }
+        [HttpGet]
+        [Route("GetAll")]
+        public IActionResult GetAll(int Pagesize = 4, int Pagenumber = 1)
+        {
+            var result = _departService.GetAllWithOutLang(Pagesize, Pagenumber);
             return Ok(result);
         }
         [HttpPut]
@@ -41,8 +48,12 @@ namespace ClinicSystem.API.Controllers {
             var result = _departService.Delete(Id);
             return Ok(result);
         }
-
-
-
+        [HttpGet]
+        [Route("SearchByName")]
+        public IActionResult Search([FromQuery]string Name)
+        {
+            var result = _departService.Find(Name);
+            return Ok(result);
+        }
     }
 }

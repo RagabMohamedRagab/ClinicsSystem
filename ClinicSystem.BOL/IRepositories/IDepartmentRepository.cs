@@ -11,6 +11,8 @@ namespace ClinicSystem.BOL.IRepositories {
         DepartMentDTO Create(DepartMentDTO dTO);
         DepartMentDTO Update(int Id,DepartMentDTO dTO);
         DepartMentDTO Delete(int Id);
-        IEnumerable<GetAllDepartDTOS> GetALLDepart(string lan = "en", int Pagesize = 4, int Pagenumber = 1);
+        IEnumerable<GetAllDepartDTOS> GetALLByLang(string lan = "en", int Pagesize = 4, int Pagenumber = 1);
+        IEnumerable<DepartMentDTO> GetAllWithOutLang(int Pagesize = 4, int Pagenumber = 1);
+        IEnumerable<DepartMentDTO> Find(string Name);
     }
 }

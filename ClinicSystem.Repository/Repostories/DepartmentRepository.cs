@@ -35,15 +35,26 @@ namespace ClinicSystem.Repositories.Repostories {
             if (departMent != null)
             {
                 departMent.IsDeleted = true;
+                departMent.DeletedOn=DateTime.Now;
                 return _mapper.Map<DepartMentDTO>(departMent);
             }
             return null;
         }
 
-        public IEnumerable<GetAllDepartDTOS> GetALLDepart(string lan="en",int Pagesize=4,int Pagenumber=1)
+        public IEnumerable<DepartMentDTO> GetAllWithOutLang(int Pagesize = 4, int Pagenumber = 1)
+        {
+            int skip = (Pagenumber - 1) * Pagesize;
+            IEnumerable<DepartMent> departMents = GetAll().Where(b => !b.IsDeleted).Skip(skip).Take(Pagesize);
+            if (departMents.Any())
+            {
+                return _mapper.Map<IEnumerable<DepartMentDTO>>(departMents);
+            }
+            return null;
+        }
+        public IEnumerable<GetAllDepartDTOS> GetALLByLang(string lan="en",int Pagesize=4,int Pagenumber=1)
         {
             int skip= (Pagenumber - 1) * Pagesize;
-            IEnumerable<DepartMent> departMents = GetAll();
+            IEnumerable<DepartMent> departMents = GetAll().Where(b=>!b.IsDeleted);
             IEnumerable<DepartMentDTO> departMentDTOs = null;
             IEnumerable<GetAllDepartDTOS> allDepartDTOS = null;
             if (departMents.Any())
@@ -53,7 +64,7 @@ namespace ClinicSystem.Repositories.Repostories {
                 {
                     allDepartDTOS = departMentDTOs.Select(b => new GetAllDepartDTOS() { Name = b.EnName });
                 }
-                else
+                else if(lan=="ar")
                 {
                     allDepartDTOS = departMentDTOs.Select(b => new GetAllDepartDTOS() { Name = b.ArName });
                 }
@@ -74,6 +85,14 @@ namespace ClinicSystem.Repositories.Repostories {
                 return dTO;
             }
             return null;
+        }
+
+        public IEnumerable<DepartMentDTO> Find(string Name)
+        {
+            var result = GetAll().Where(b=>!b.IsDeleted).Where(b => b.ArName == Name || b.EnName == Name);
+            if (result == null)
+                return null;
+            return _mapper.Map<IEnumerable<DepartMentDTO>>(result);
         }
     }
 }
