@@ -4,7 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ClinicSystem.BOL.IServices {
-    internal interface Interface1 {
+namespace ClinicSystem.Models.DTOS.Department {
+    public class GetAllDepartDTOS {
+        public string Name { get; set; }
+
     }
 }

@@ -7,6 +7,7 @@
   <ItemGroup>
     <ProjectReference Include="..\ClinicSystem.BOL\ClinicSystem.BOL.csproj" />
     <ProjectReference Include="..\ClinicSystem.DAL\ClinicSystem.DAL.csproj" />
+    <ProjectReference Include="..\ClinicSystem.Models\ClinicSystem.Models.csproj" />
   </ItemGroup>
 
 </Project>

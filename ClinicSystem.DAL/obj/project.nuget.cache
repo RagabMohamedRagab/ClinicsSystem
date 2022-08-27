@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "DwUW5dYZjjFjpozGPCtQPt+pjqmgGKrVPrGXUj2wjMj+dNuzpNqUTRUHt1zUKopKVwCKY0USRKR/ehzTkG2OxQ==",
+  "dgSpecHash": "AGy9XwX1TNqpXiX1xq4bAOcPKGAaL0PTZeB0l2mAqrXsfnMUNwSHrGuBXwXj0asadC9khQC8iLb4BHzwotX5mg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\pc\\Desktop\\New folder\\ClinicSystem.DAL\\ClinicSystem.DAL.csproj",
+  "projectFilePath": "C:\\Users\\pc\\Desktop\\Clinic\\ClinicSystem.DAL\\ClinicSystem.DAL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\pc\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\pc\\.nuget\\packages\\microsoft.aspnetcore.authentication\\2.2.0\\microsoft.aspnetcore.authentication.2.2.0.nupkg.sha512",

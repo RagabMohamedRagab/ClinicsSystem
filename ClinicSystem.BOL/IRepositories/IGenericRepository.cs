@@ -10,6 +10,8 @@ namespace ClinicSystem.BOL.IRepositories {
         EntityEntry<EntityEntry> Create(EntityEntry model);
         EntityEntry Update(EntityEntry model);
        void Delete(EntityEntry model);
+        EntityEntry Find(int Id);
        IEnumerable<EntityEntry> GetAll();
+        int Count();
     }
 }

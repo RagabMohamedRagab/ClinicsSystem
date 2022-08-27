@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\pc\\Desktop\\New folder\\ClinicSystem.API\\ClinicSystem.API.csproj": {}
+    "C:\\Users\\pc\\Desktop\\Clinic\\ClinicSystem.API\\ClinicSystem.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\pc\\Desktop\\New folder\\ClinicSystem.API\\ClinicSystem.API.csproj": {
+    "C:\\Users\\pc\\Desktop\\Clinic\\ClinicSystem.API\\ClinicSystem.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\pc\\Desktop\\New folder\\ClinicSystem.API\\ClinicSystem.API.csproj",
+        "projectUniqueName": "C:\\Users\\pc\\Desktop\\Clinic\\ClinicSystem.API\\ClinicSystem.API.csproj",
         "projectName": "ClinicSystem.API",
-        "projectPath": "C:\\Users\\pc\\Desktop\\New folder\\ClinicSystem.API\\ClinicSystem.API.csproj",
+        "projectPath": "C:\\Users\\pc\\Desktop\\Clinic\\ClinicSystem.API\\ClinicSystem.API.csproj",
         "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\pc\\Desktop\\New folder\\ClinicSystem.API\\obj\\",
+        "outputPath": "C:\\Users\\pc\\Desktop\\Clinic\\ClinicSystem.API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -32,14 +32,20 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\pc\\Desktop\\New folder\\ClinicSystem.BOL\\ClinicSystem.BOL.csproj": {
-                "projectPath": "C:\\Users\\pc\\Desktop\\New folder\\ClinicSystem.BOL\\ClinicSystem.BOL.csproj"
+              "C:\\Users\\pc\\Desktop\\Clinic\\ClinicSystem.BLL\\ClinicSystem.BLL.csproj": {
+                "projectPath": "C:\\Users\\pc\\Desktop\\Clinic\\ClinicSystem.BLL\\ClinicSystem.BLL.csproj"
               },
-              "C:\\Users\\pc\\Desktop\\New folder\\ClinicSystem.DAL\\ClinicSystem.DAL.csproj": {
-                "projectPath": "C:\\Users\\pc\\Desktop\\New folder\\ClinicSystem.DAL\\ClinicSystem.DAL.csproj"
+              "C:\\Users\\pc\\Desktop\\Clinic\\ClinicSystem.BOL\\ClinicSystem.BOL.csproj": {
+                "projectPath": "C:\\Users\\pc\\Desktop\\Clinic\\ClinicSystem.BOL\\ClinicSystem.BOL.csproj"
               },
-              "C:\\Users\\pc\\Desktop\\New folder\\ClinicSystem.UnitOfWork\\ClinicSystem.UnitOfWork.csproj": {
-                "projectPath": "C:\\Users\\pc\\Desktop\\New folder\\ClinicSystem.UnitOfWork\\ClinicSystem.UnitOfWork.csproj"
+              "C:\\Users\\pc\\Desktop\\Clinic\\ClinicSystem.DAL\\ClinicSystem.DAL.csproj": {
+                "projectPath": "C:\\Users\\pc\\Desktop\\Clinic\\ClinicSystem.DAL\\ClinicSystem.DAL.csproj"
+              },
+              "C:\\Users\\pc\\Desktop\\Clinic\\ClinicSystem.Repository\\ClinicSystem.Repositories.csproj": {
+                "projectPath": "C:\\Users\\pc\\Desktop\\Clinic\\ClinicSystem.Repository\\ClinicSystem.Repositories.csproj"
+              },
+              "C:\\Users\\pc\\Desktop\\Clinic\\ClinicSystem.UnitOfWork\\ClinicSystem.UnitOfWork.csproj": {
+                "projectPath": "C:\\Users\\pc\\Desktop\\Clinic\\ClinicSystem.UnitOfWork\\ClinicSystem.UnitOfWork.csproj"
               }
             }
           }
@@ -56,7 +62,7 @@
           "dependencies": {
             "AutoMapper.Extensions.Microsoft.DependencyInjection": {
               "target": "Package",
-              "version": "[5.0.1, )"
+              "version": "[11.0.0, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
@@ -95,14 +101,14 @@
         }
       }
     },
-    "C:\\Users\\pc\\Desktop\\New folder\\ClinicSystem.BOL\\ClinicSystem.BOL.csproj": {
+    "C:\\Users\\pc\\Desktop\\Clinic\\ClinicSystem.BLL\\ClinicSystem.BLL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\pc\\Desktop\\New folder\\ClinicSystem.BOL\\ClinicSystem.BOL.csproj",
-        "projectName": "ClinicSystem.BOL",
-        "projectPath": "C:\\Users\\pc\\Desktop\\New folder\\ClinicSystem.BOL\\ClinicSystem.BOL.csproj",
+        "projectUniqueName": "C:\\Users\\pc\\Desktop\\Clinic\\ClinicSystem.BLL\\ClinicSystem.BLL.csproj",
+        "projectName": "ClinicSystem.BLL",
+        "projectPath": "C:\\Users\\pc\\Desktop\\Clinic\\ClinicSystem.BLL\\ClinicSystem.BLL.csproj",
         "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\pc\\Desktop\\New folder\\ClinicSystem.BOL\\obj\\",
+        "outputPath": "C:\\Users\\pc\\Desktop\\Clinic\\ClinicSystem.BLL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -122,7 +128,82 @@
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\pc\\Desktop\\Clinic\\ClinicSystem.Repository\\ClinicSystem.Repositories.csproj": {
+                "projectPath": "C:\\Users\\pc\\Desktop\\Clinic\\ClinicSystem.Repository\\ClinicSystem.Repositories.csproj"
+              },
+              "C:\\Users\\pc\\Desktop\\Clinic\\ClinicSystem.UnitOfWork\\ClinicSystem.UnitOfWork.csproj": {
+                "projectPath": "C:\\Users\\pc\\Desktop\\Clinic\\ClinicSystem.UnitOfWork\\ClinicSystem.UnitOfWork.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.108\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\pc\\Desktop\\Clinic\\ClinicSystem.BOL\\ClinicSystem.BOL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\pc\\Desktop\\Clinic\\ClinicSystem.BOL\\ClinicSystem.BOL.csproj",
+        "projectName": "ClinicSystem.BOL",
+        "projectPath": "C:\\Users\\pc\\Desktop\\Clinic\\ClinicSystem.BOL\\ClinicSystem.BOL.csproj",
+        "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\pc\\Desktop\\Clinic\\ClinicSystem.BOL\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\pc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\pc\\Desktop\\Clinic\\ClinicSystem.DAL\\ClinicSystem.DAL.csproj": {
+                "projectPath": "C:\\Users\\pc\\Desktop\\Clinic\\ClinicSystem.DAL\\ClinicSystem.DAL.csproj"
+              },
+              "C:\\Users\\pc\\Desktop\\Clinic\\ClinicSystem.Helper\\ClinicSystem.Helpers.csproj": {
+                "projectPath": "C:\\Users\\pc\\Desktop\\Clinic\\ClinicSystem.Helper\\ClinicSystem.Helpers.csproj"
+              },
+              "C:\\Users\\pc\\Desktop\\Clinic\\ClinicSystem.Models\\ClinicSystem.Models.csproj": {
+                "projectPath": "C:\\Users\\pc\\Desktop\\Clinic\\ClinicSystem.Models\\ClinicSystem.Models.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -159,14 +240,14 @@
         }
       }
     },
-    "C:\\Users\\pc\\Desktop\\New folder\\ClinicSystem.DAL\\ClinicSystem.DAL.csproj": {
+    "C:\\Users\\pc\\Desktop\\Clinic\\ClinicSystem.DAL\\ClinicSystem.DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\pc\\Desktop\\New folder\\ClinicSystem.DAL\\ClinicSystem.DAL.csproj",
+        "projectUniqueName": "C:\\Users\\pc\\Desktop\\Clinic\\ClinicSystem.DAL\\ClinicSystem.DAL.csproj",
         "projectName": "ClinicSystem.DAL",
-        "projectPath": "C:\\Users\\pc\\Desktop\\New folder\\ClinicSystem.DAL\\ClinicSystem.DAL.csproj",
+        "projectPath": "C:\\Users\\pc\\Desktop\\Clinic\\ClinicSystem.DAL\\ClinicSystem.DAL.csproj",
         "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\pc\\Desktop\\New folder\\ClinicSystem.DAL\\obj\\",
+        "outputPath": "C:\\Users\\pc\\Desktop\\Clinic\\ClinicSystem.DAL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -187,8 +268,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\pc\\Desktop\\New folder\\ClinicSystem.Helper\\ClinicSystem.Helpers.csproj": {
-                "projectPath": "C:\\Users\\pc\\Desktop\\New folder\\ClinicSystem.Helper\\ClinicSystem.Helpers.csproj"
+              "C:\\Users\\pc\\Desktop\\Clinic\\ClinicSystem.Helper\\ClinicSystem.Helpers.csproj": {
+                "projectPath": "C:\\Users\\pc\\Desktop\\Clinic\\ClinicSystem.Helper\\ClinicSystem.Helpers.csproj"
               }
             }
           }
@@ -259,14 +340,14 @@
         }
       }
     },
-    "C:\\Users\\pc\\Desktop\\New folder\\ClinicSystem.Helper\\ClinicSystem.Helpers.csproj": {
+    "C:\\Users\\pc\\Desktop\\Clinic\\ClinicSystem.Helper\\ClinicSystem.Helpers.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\pc\\Desktop\\New folder\\ClinicSystem.Helper\\ClinicSystem.Helpers.csproj",
+        "projectUniqueName": "C:\\Users\\pc\\Desktop\\Clinic\\ClinicSystem.Helper\\ClinicSystem.Helpers.csproj",
         "projectName": "ClinicSystem.Helpers",
-        "projectPath": "C:\\Users\\pc\\Desktop\\New folder\\ClinicSystem.Helper\\ClinicSystem.Helpers.csproj",
+        "projectPath": "C:\\Users\\pc\\Desktop\\Clinic\\ClinicSystem.Helper\\ClinicSystem.Helpers.csproj",
         "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\pc\\Desktop\\New folder\\ClinicSystem.Helper\\obj\\",
+        "outputPath": "C:\\Users\\pc\\Desktop\\Clinic\\ClinicSystem.Helper\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -317,14 +398,14 @@
         }
       }
     },
-    "C:\\Users\\pc\\Desktop\\New folder\\ClinicSystem.UnitOfWork\\ClinicSystem.UnitOfWork.csproj": {
+    "C:\\Users\\pc\\Desktop\\Clinic\\ClinicSystem.Models\\ClinicSystem.Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\pc\\Desktop\\New folder\\ClinicSystem.UnitOfWork\\ClinicSystem.UnitOfWork.csproj",
-        "projectName": "ClinicSystem.UnitOfWork",
-        "projectPath": "C:\\Users\\pc\\Desktop\\New folder\\ClinicSystem.UnitOfWork\\ClinicSystem.UnitOfWork.csproj",
+        "projectUniqueName": "C:\\Users\\pc\\Desktop\\Clinic\\ClinicSystem.Models\\ClinicSystem.Models.csproj",
+        "projectName": "ClinicSystem.Models",
+        "projectPath": "C:\\Users\\pc\\Desktop\\Clinic\\ClinicSystem.Models\\ClinicSystem.Models.csproj",
         "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\pc\\Desktop\\New folder\\ClinicSystem.UnitOfWork\\obj\\",
+        "outputPath": "C:\\Users\\pc\\Desktop\\Clinic\\ClinicSystem.Models\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -345,8 +426,147 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\pc\\Desktop\\New folder\\ClinicSystem.DAL\\ClinicSystem.DAL.csproj": {
-                "projectPath": "C:\\Users\\pc\\Desktop\\New folder\\ClinicSystem.DAL\\ClinicSystem.DAL.csproj"
+              "C:\\Users\\pc\\Desktop\\Clinic\\ClinicSystem.DAL\\ClinicSystem.DAL.csproj": {
+                "projectPath": "C:\\Users\\pc\\Desktop\\Clinic\\ClinicSystem.DAL\\ClinicSystem.DAL.csproj"
+              },
+              "C:\\Users\\pc\\Desktop\\Clinic\\ClinicSystem.Helper\\ClinicSystem.Helpers.csproj": {
+                "projectPath": "C:\\Users\\pc\\Desktop\\Clinic\\ClinicSystem.Helper\\ClinicSystem.Helpers.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[11.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.108\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\pc\\Desktop\\Clinic\\ClinicSystem.Repository\\ClinicSystem.Repositories.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\pc\\Desktop\\Clinic\\ClinicSystem.Repository\\ClinicSystem.Repositories.csproj",
+        "projectName": "ClinicSystem.Repositories",
+        "projectPath": "C:\\Users\\pc\\Desktop\\Clinic\\ClinicSystem.Repository\\ClinicSystem.Repositories.csproj",
+        "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\pc\\Desktop\\Clinic\\ClinicSystem.Repository\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\pc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\pc\\Desktop\\Clinic\\ClinicSystem.BOL\\ClinicSystem.BOL.csproj": {
+                "projectPath": "C:\\Users\\pc\\Desktop\\Clinic\\ClinicSystem.BOL\\ClinicSystem.BOL.csproj"
+              },
+              "C:\\Users\\pc\\Desktop\\Clinic\\ClinicSystem.DAL\\ClinicSystem.DAL.csproj": {
+                "projectPath": "C:\\Users\\pc\\Desktop\\Clinic\\ClinicSystem.DAL\\ClinicSystem.DAL.csproj"
+              },
+              "C:\\Users\\pc\\Desktop\\Clinic\\ClinicSystem.Models\\ClinicSystem.Models.csproj": {
+                "projectPath": "C:\\Users\\pc\\Desktop\\Clinic\\ClinicSystem.Models\\ClinicSystem.Models.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.108\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\pc\\Desktop\\Clinic\\ClinicSystem.UnitOfWork\\ClinicSystem.UnitOfWork.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\pc\\Desktop\\Clinic\\ClinicSystem.UnitOfWork\\ClinicSystem.UnitOfWork.csproj",
+        "projectName": "ClinicSystem.UnitOfWork",
+        "projectPath": "C:\\Users\\pc\\Desktop\\Clinic\\ClinicSystem.UnitOfWork\\ClinicSystem.UnitOfWork.csproj",
+        "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\pc\\Desktop\\Clinic\\ClinicSystem.UnitOfWork\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\pc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\pc\\Desktop\\Clinic\\ClinicSystem.DAL\\ClinicSystem.DAL.csproj": {
+                "projectPath": "C:\\Users\\pc\\Desktop\\Clinic\\ClinicSystem.DAL\\ClinicSystem.DAL.csproj"
               }
             }
           }

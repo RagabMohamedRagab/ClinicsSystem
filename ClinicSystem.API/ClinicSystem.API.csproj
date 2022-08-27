@@ -5,7 +5,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="5.0.1" />
+
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
+
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.17" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.17">
       <PrivateAssets>all</PrivateAssets>
@@ -15,8 +17,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ClinicSystem.BLL\ClinicSystem.BLL.csproj" />
     <ProjectReference Include="..\ClinicSystem.BOL\ClinicSystem.BOL.csproj" />
     <ProjectReference Include="..\ClinicSystem.DAL\ClinicSystem.DAL.csproj" />
+    <ProjectReference Include="..\ClinicSystem.Repository\ClinicSystem.Repositories.csproj" />
     <ProjectReference Include="..\ClinicSystem.UnitOfWork\ClinicSystem.UnitOfWork.csproj" />
   </ItemGroup>
 

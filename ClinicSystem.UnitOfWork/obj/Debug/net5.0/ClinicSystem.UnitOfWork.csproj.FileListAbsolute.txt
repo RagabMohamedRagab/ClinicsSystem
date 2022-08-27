@@ -15,3 +15,20 @@ C:\Users\pc\Desktop\New folder\ClinicSystem.UnitOfWork\obj\Debug\net5.0\ClinicSy
 C:\Users\pc\Desktop\New folder\ClinicSystem.UnitOfWork\obj\Debug\net5.0\ClinicSystem.UnitOfWork.dll
 C:\Users\pc\Desktop\New folder\ClinicSystem.UnitOfWork\obj\Debug\net5.0\ref\ClinicSystem.UnitOfWork.dll
 C:\Users\pc\Desktop\New folder\ClinicSystem.UnitOfWork\obj\Debug\net5.0\ClinicSystem.UnitOfWork.pdb
+C:\Users\pc\Desktop\Clinic\ClinicSystem.UnitOfWork\bin\Debug\net5.0\ClinicSystem.UnitOfWork.deps.json
+C:\Users\pc\Desktop\Clinic\ClinicSystem.UnitOfWork\bin\Debug\net5.0\ClinicSystem.UnitOfWork.dll
+C:\Users\pc\Desktop\Clinic\ClinicSystem.UnitOfWork\bin\Debug\net5.0\ref\ClinicSystem.UnitOfWork.dll
+C:\Users\pc\Desktop\Clinic\ClinicSystem.UnitOfWork\bin\Debug\net5.0\ClinicSystem.UnitOfWork.pdb
+C:\Users\pc\Desktop\Clinic\ClinicSystem.UnitOfWork\bin\Debug\net5.0\ClinicSystem.DAL.dll
+C:\Users\pc\Desktop\Clinic\ClinicSystem.UnitOfWork\bin\Debug\net5.0\ClinicSystem.Helpers.dll
+C:\Users\pc\Desktop\Clinic\ClinicSystem.UnitOfWork\bin\Debug\net5.0\ClinicSystem.DAL.pdb
+C:\Users\pc\Desktop\Clinic\ClinicSystem.UnitOfWork\bin\Debug\net5.0\ClinicSystem.Helpers.pdb
+C:\Users\pc\Desktop\Clinic\ClinicSystem.UnitOfWork\obj\Debug\net5.0\ClinicSystem.UnitOfWork.csproj.AssemblyReference.cache
+C:\Users\pc\Desktop\Clinic\ClinicSystem.UnitOfWork\obj\Debug\net5.0\ClinicSystem.UnitOfWork.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\pc\Desktop\Clinic\ClinicSystem.UnitOfWork\obj\Debug\net5.0\ClinicSystem.UnitOfWork.AssemblyInfoInputs.cache
+C:\Users\pc\Desktop\Clinic\ClinicSystem.UnitOfWork\obj\Debug\net5.0\ClinicSystem.UnitOfWork.AssemblyInfo.cs
+C:\Users\pc\Desktop\Clinic\ClinicSystem.UnitOfWork\obj\Debug\net5.0\ClinicSystem.UnitOfWork.csproj.CoreCompileInputs.cache
+C:\Users\pc\Desktop\Clinic\ClinicSystem.UnitOfWork\obj\Debug\net5.0\ClinicSystem.UnitOfWork.csproj.CopyComplete
+C:\Users\pc\Desktop\Clinic\ClinicSystem.UnitOfWork\obj\Debug\net5.0\ClinicSystem.UnitOfWork.dll
+C:\Users\pc\Desktop\Clinic\ClinicSystem.UnitOfWork\obj\Debug\net5.0\ref\ClinicSystem.UnitOfWork.dll
+C:\Users\pc\Desktop\Clinic\ClinicSystem.UnitOfWork\obj\Debug\net5.0\ClinicSystem.UnitOfWork.pdb

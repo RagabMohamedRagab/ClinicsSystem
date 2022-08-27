@@ -9,6 +9,10 @@ using System.Threading.Tasks;
 
 namespace ClinicSystem.DAL.Context {
     public partial class ClinicDbContext :IdentityDbContext<ApplicationUser>{
+        public ClinicDbContext()
+        {
+
+        }
         public ClinicDbContext(DbContextOptions<ClinicDbContext> options):base(options){}
         
      public virtual DbSet<Appointment> Appointments { get; set; } 

@@ -6560,11 +6560,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\pc\\Desktop\\New folder\\ClinicSystem.UnitOfWork\\ClinicSystem.UnitOfWork.csproj",
+      "projectUniqueName": "C:\\Users\\pc\\Desktop\\Clinic\\ClinicSystem.UnitOfWork\\ClinicSystem.UnitOfWork.csproj",
       "projectName": "ClinicSystem.UnitOfWork",
-      "projectPath": "C:\\Users\\pc\\Desktop\\New folder\\ClinicSystem.UnitOfWork\\ClinicSystem.UnitOfWork.csproj",
+      "projectPath": "C:\\Users\\pc\\Desktop\\Clinic\\ClinicSystem.UnitOfWork\\ClinicSystem.UnitOfWork.csproj",
       "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\pc\\Desktop\\New folder\\ClinicSystem.UnitOfWork\\obj\\",
+      "outputPath": "C:\\Users\\pc\\Desktop\\Clinic\\ClinicSystem.UnitOfWork\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -6585,8 +6585,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\pc\\Desktop\\New folder\\ClinicSystem.DAL\\ClinicSystem.DAL.csproj": {
-              "projectPath": "C:\\Users\\pc\\Desktop\\New folder\\ClinicSystem.DAL\\ClinicSystem.DAL.csproj"
+            "C:\\Users\\pc\\Desktop\\Clinic\\ClinicSystem.DAL\\ClinicSystem.DAL.csproj": {
+              "projectPath": "C:\\Users\\pc\\Desktop\\Clinic\\ClinicSystem.DAL\\ClinicSystem.DAL.csproj"
             }
           }
         }

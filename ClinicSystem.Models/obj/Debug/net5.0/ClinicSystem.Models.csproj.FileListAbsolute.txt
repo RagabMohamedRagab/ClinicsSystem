@@ -13,3 +13,20 @@ C:\Users\pc\Desktop\New folder\ClinicSystem.Models\obj\Debug\net5.0\ClinicSystem
 C:\Users\pc\Desktop\New folder\ClinicSystem.Models\obj\Debug\net5.0\ClinicSystem.Models.dll
 C:\Users\pc\Desktop\New folder\ClinicSystem.Models\obj\Debug\net5.0\ref\ClinicSystem.Models.dll
 C:\Users\pc\Desktop\New folder\ClinicSystem.Models\obj\Debug\net5.0\ClinicSystem.Models.pdb
+C:\Users\pc\Desktop\Clinic\ClinicSystem.Models\bin\Debug\net5.0\ClinicSystem.Models.deps.json
+C:\Users\pc\Desktop\Clinic\ClinicSystem.Models\bin\Debug\net5.0\ClinicSystem.Models.dll
+C:\Users\pc\Desktop\Clinic\ClinicSystem.Models\bin\Debug\net5.0\ref\ClinicSystem.Models.dll
+C:\Users\pc\Desktop\Clinic\ClinicSystem.Models\bin\Debug\net5.0\ClinicSystem.Models.pdb
+C:\Users\pc\Desktop\Clinic\ClinicSystem.Models\bin\Debug\net5.0\ClinicSystem.Helpers.dll
+C:\Users\pc\Desktop\Clinic\ClinicSystem.Models\bin\Debug\net5.0\ClinicSystem.Helpers.pdb
+C:\Users\pc\Desktop\Clinic\ClinicSystem.Models\obj\Debug\net5.0\ClinicSystem.Models.csproj.AssemblyReference.cache
+C:\Users\pc\Desktop\Clinic\ClinicSystem.Models\obj\Debug\net5.0\ClinicSystem.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\pc\Desktop\Clinic\ClinicSystem.Models\obj\Debug\net5.0\ClinicSystem.Models.AssemblyInfoInputs.cache
+C:\Users\pc\Desktop\Clinic\ClinicSystem.Models\obj\Debug\net5.0\ClinicSystem.Models.AssemblyInfo.cs
+C:\Users\pc\Desktop\Clinic\ClinicSystem.Models\obj\Debug\net5.0\ClinicSystem.Models.csproj.CoreCompileInputs.cache
+C:\Users\pc\Desktop\Clinic\ClinicSystem.Models\obj\Debug\net5.0\ClinicSystem.Models.csproj.CopyComplete
+C:\Users\pc\Desktop\Clinic\ClinicSystem.Models\obj\Debug\net5.0\ClinicSystem.Models.dll
+C:\Users\pc\Desktop\Clinic\ClinicSystem.Models\obj\Debug\net5.0\ref\ClinicSystem.Models.dll
+C:\Users\pc\Desktop\Clinic\ClinicSystem.Models\obj\Debug\net5.0\ClinicSystem.Models.pdb
+C:\Users\pc\Desktop\Clinic\ClinicSystem.Models\bin\Debug\net5.0\ClinicSystem.DAL.dll
+C:\Users\pc\Desktop\Clinic\ClinicSystem.Models\bin\Debug\net5.0\ClinicSystem.DAL.pdb

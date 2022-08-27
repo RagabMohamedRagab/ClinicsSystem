@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace ClinicSystem.Repository {
@@ -17,6 +18,11 @@ namespace ClinicSystem.Repository {
             dbSet = _clinic.Set<EntityEntry>();
         }
 
+        public int Count()
+        {
+            return dbSet.Count();
+        }
+
         public EntityEntry<EntityEntry> Create(EntityEntry model)
         {
             return dbSet.Add(model);
@@ -26,6 +32,12 @@ namespace ClinicSystem.Repository {
         {
             dbSet.Remove(model);
         }
+
+        public EntityEntry Find(int Id)
+        {
+          return  dbSet.Find(Id);
+        }
+
         public IEnumerable<EntityEntry> GetAll()
         {
             return dbSet;

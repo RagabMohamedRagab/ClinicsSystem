@@ -15,6 +15,7 @@ namespace ClinicSystem.DAL.Domains {
         public string ArName { get; set; }
         [Required, MaxLength(200)]
         public string EnName { get; set; }
-    public virtual ICollection<ApplicationUser> Users { get; set; }
+        public int Order { get; set; }
+        public virtual ICollection<ApplicationUser> Users { get; set; }
     }
 }
