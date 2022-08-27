@@ -1,4 +1,5 @@
 using AutoMapper;
+using ClinicSystem.BLL.Services;
 using ClinicSystem.BOL.IRepositories;
 using ClinicSystem.BOL.IServices;
 using ClinicSystem.DAL.Context;
@@ -46,7 +47,7 @@ namespace ClinicSystem.API {
             services.AddTransient<IDepartmentRepository, DepartmentRepository>();
             #endregion
             #region Services
-            services.AddTransient< ClinicSystem.BOL.IServices.IDepartMentService,ClinicSystem.BLL.Services.DepartMentService>();
+            services.AddTransient<IDepartMentService,DepartMentService>();
             #endregion
             services.AddControllers();
             services.AddSwaggerGen(c =>
