@@ -37,7 +37,7 @@ namespace ClinicSystem.Repositories.Repostories {
         public CountryDTO Delete(int Id)
         {
             var result = Find(Id);
-            if (result != null)
+            if (result != null && !result.IsDeleted) 
             {
                 result.IsDeleted = true;
                 result.DeletedOn = DateTime.Now;
@@ -53,7 +53,13 @@ namespace ClinicSystem.Repositories.Repostories {
             if (countries.Any())
             {
                 countries = countries.Skip(skip).Take(Pagesize);
-                return _mapper.Map<IEnumerable<CountryDTO>>(countries);
+               
+              var allcountries=_mapper.Map<IEnumerable<CountryDTO>>(countries);
+                foreach (var item in allcountries)
+                {
+                    item.Logo = "/" + Folder.Countries.ToString() + "/" + item.Logo;
+                }
+                return allcountries;
             }
             return null;
         }
@@ -67,11 +73,11 @@ namespace ClinicSystem.Repositories.Repostories {
             {
                 if (Lang.ToLower() == "en")
                 {
-                    allCountries = countries.Skip(skip).Take(Pagesize).Select(b => new AllCountryDTO() { Name = b.EnName, Logo = b.Logo });
+                    allCountries = countries.Skip(skip).Take(Pagesize).Select(b => new AllCountryDTO() { Name = b.EnName, Logo = "/" + Folder.Countries.ToString() + "/" + b.Logo});
                 }
                 else
                 {
-                    allCountries = countries.Skip(skip).Take(Pagesize).Select(b => new AllCountryDTO() { Name = b.ArName, Logo = b.Logo });
+                    allCountries = countries.Skip(skip).Take(Pagesize).Select(b => new AllCountryDTO() { Name = b.ArName, Logo  = "/" + Folder.Countries.ToString() + "/" + b.Logo });
                 }
                 return allCountries;
             }
@@ -85,7 +91,9 @@ namespace ClinicSystem.Repositories.Repostories {
             var country = Find(Id);
             if (country != null && !country.IsDeleted) 
             {
-                return _mapper.Map<CountryDTO>(country);
+               var countrydto=_mapper.Map<CountryDTO>(country);
+                countrydto.Logo = "/" + Folder.Countries.ToString() + "/" + countrydto.Logo;
+                return countrydto;
             }
             return null;
         }
@@ -137,10 +145,18 @@ namespace ClinicSystem.Repositories.Repostories {
                     EntityDb.ModifiedOn = DateTime.Now;
 
                 }
-                else if (PathUrl == null && EName == null && ArName == null)
+                else if (PathUrl != null && EName != null && ArName != null)
+                {
+                    EntityDb.EnName = EName;
+                    EntityDb.ArName = ArName;
+                    EntityDb.Logo = PathUrl;
+                    EntityDb.ModifiedOn = DateTime.Now;
+                }
+                else
                 {
                     return null;
                 }
+
                 CountryDTO dTO = new CountryDTO()
                 {
                     ArName = EntityDb.ArName,
@@ -148,6 +164,15 @@ namespace ClinicSystem.Repositories.Repostories {
                     Logo = "/" + Folder.Countries.ToString() + "/" + EntityDb.Logo,
                 };
                 return dTO;
+            }
+            return null;
+        }
+        public IEnumerable<CountryDTO> SearchByName(string Name)
+        {
+            var result = GetAll().Where(b => !b.IsDeleted ).Where(b=>b.EnName.ToLower().Contains(Name.ToLower())|| b.ArName.ToLower().Contains(Name.ToLower()));
+            if (result.Count()>0)
+            {
+                return result.Select(b => new CountryDTO() { ArName = b.ArName, EnName = b.EnName, Logo = "/" + Folder.Countries.ToString() + "/" + b.Logo, });
             }
             return null;
         }

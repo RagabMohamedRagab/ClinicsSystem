@@ -101,12 +101,40 @@ namespace ClinicSystem.BLL.Services {
 
         public ResponseObject GetAllByLang(string Lang = "en", int Pagesize = 4, int PageNumber = 1)
         {
-            throw new NotImplementedException();
+            ResponseObject response = new ResponseObject();
+            if (String.IsNullOrEmpty(Lang) || PageNumber <= 0 || Pagesize <= 0)
+            {
+                response.ErrorMessage = ErrorsCodes.ParameteresNotCorrect.ToString();
+                return response;
+            }
+            var allcountries = _countryrepo.GetAllByLang(Lang, Pagesize, PageNumber);
+            if (allcountries.Any())
+            {
+                response.ErrorMessage = ErrorsCodes.Success.ToString();
+                response.Data = allcountries;
+                return response;
+            }
+            response.ErrorMessage = ErrorsCodes.NotFound.ToString();
+            return response;
         }
 
         public ResponseObject GetAllWithoutLang(int Pagesize = 4, int PageNumber = 1)
         {
-            throw new NotImplementedException();
+            ResponseObject response = new ResponseObject();
+            if (PageNumber <= 0 || Pagesize < 0)
+            {
+                response.ErrorMessage = ErrorsCodes.ParameteresNotCorrect.ToString();
+                return response;
+            }
+            var allCountries = _countryrepo.GetAllWithoutLang(Pagesize, PageNumber);
+            if (allCountries == null)
+            {
+                response.ErrorMessage = ErrorsCodes.NotFound.ToString();
+                return response;
+            }
+            response.ErrorMessage = ErrorsCodes.Success.ToString();
+            response.Data = allCountries;
+            return response;
         }
 
         public ResponseObject Update(int Id, CountryCreateDTO country)
@@ -146,7 +174,7 @@ namespace ClinicSystem.BLL.Services {
                 {
                     if (NewPath != null)
                     {
-                        if(_fileService.Remove(OldPath, Folder.Countries))
+                        if (_fileService.Remove(OldPath, Folder.Countries))
                         {
                             _fileService.Create(country.Logo, Folder.Countries);
                         }
@@ -158,13 +186,51 @@ namespace ClinicSystem.BLL.Services {
                         return response;
                     }
                 }
-                throw new Exception();
+                response.ErrorMessage = ErrorsCodes.InvalidUpadte.ToString();
+                return response;
             }
             catch (Exception)
             {
                 response.ErrorMessage = ErrorsCodes.InvalidUpadte.ToString();
                 return response;
             }
+        }
+        public ResponseObject SearchByName(string Name)
+        {
+            ResponseObject response = new ResponseObject();
+            if (String.IsNullOrEmpty(Name))
+            {
+                response.ErrorMessage = ErrorsCodes.NamesAreNull.ToString();
+                return response;
+            }
+            var entitydto = _countryrepo.SearchByName(Name);
+            if (entitydto != null)
+            {
+                response.ErrorMessage = ErrorsCodes.Success.ToString();
+                response.Data = entitydto;
+                return response;
+            }
+            response.ErrorMessage = ErrorsCodes.NotFound.ToString();
+            return response;
+
+        }
+        public ResponseObject SearchById(int Id)
+        {
+            ResponseObject response = new ResponseObject();
+            if (Id <= 0)
+            {
+                response.ErrorMessage = ErrorsCodes.IDNotValid.ToString();
+                return response;
+            }
+         var ok= _countryrepo.Find(Id);
+            if (ok == null)
+            {
+                response.ErrorMessage = ErrorsCodes.NotFound.ToString();
+                return response;
+            }
+            response.ErrorMessage = ErrorsCodes.Success.ToString();
+            response.Data = ok;
+            return response;
         }
     }
 }

@@ -101,7 +101,7 @@ namespace ClinicSystem.BLL.Services {
                 responseObject.Data = depart;
                 return responseObject;
             }
-            responseObject.ErrorMessage = ErrorsCodes.InvalidObject.ToString();
+            responseObject.ErrorMessage = ErrorsCodes.NotFound.ToString();
             return responseObject;
         }
 

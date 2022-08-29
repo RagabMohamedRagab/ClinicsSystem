@@ -89,7 +89,7 @@ namespace ClinicSystem.Repositories.Repostories {
         public IEnumerable<DepartMentDTO> Find(string Name)
         {
             var result = GetAll().Where(b=>!b.IsDeleted).Where(b => b.ArName.ToLower().Contains(Name.ToLower()) || b.EnName.ToLower().Contains(Name.ToLower()));
-            if (result == null)
+            if (result.Count()<=0)
                 return null;
             return _mapper.Map<IEnumerable<DepartMentDTO>>(result);
         }

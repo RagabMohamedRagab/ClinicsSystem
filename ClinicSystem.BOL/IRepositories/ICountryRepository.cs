@@ -13,6 +13,7 @@ namespace ClinicSystem.BOL.IRepositories {
         IEnumerable<AllCountryDTO> GetAllByLang(string Lang="en",int Pagesize=4,int PageNumber=1);
         IEnumerable<CountryDTO> GetAllWithoutLang(int Pagesize = 4, int PageNumber = 1);
         CountryDTO Find(int Id);
+        IEnumerable<CountryDTO> SearchByName(string Name);
 
     }
 }

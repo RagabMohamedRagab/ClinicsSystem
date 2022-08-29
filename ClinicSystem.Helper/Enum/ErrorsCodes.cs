@@ -17,5 +17,6 @@ namespace ClinicSystem.Helpers.Enum {
         ImageIsNotValid=8,
         ExtentioPNGANDJPG=9,
         InvalidDelete = 10,
+        NotFound=11
     }
 }
