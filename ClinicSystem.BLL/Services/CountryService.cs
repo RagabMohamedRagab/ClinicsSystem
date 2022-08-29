@@ -27,7 +27,7 @@ namespace ClinicSystem.BLL.Services {
         public ResponseObject Create(CountryCreateDTO country)
         {
             ResponseObject response = new ResponseObject();
-            string path =String.Empty;
+            string path = String.Empty;
             if (country == null)
             {
                 response.ErrorMessage = ErrorsCodes.InvalidObject.ToString();
@@ -35,17 +35,17 @@ namespace ClinicSystem.BLL.Services {
             }
             if (String.IsNullOrEmpty(country.ArName) || String.IsNullOrEmpty(country.EnName))
             {
-                response.ErrorMessage=ErrorsCodes.NamesAreNull.ToString();
+                response.ErrorMessage = ErrorsCodes.NamesAreNull.ToString();
                 return response;
             }
             if (country.Logo == null)
             {
-                response.ErrorMessage=ErrorsCodes.ImageIsNotValid.ToString();
+                response.ErrorMessage = ErrorsCodes.ImageIsNotValid.ToString();
                 return response;
             }
             else
             {
-                     path= _fileService.Create(country.Logo, Folder.Countries);
+                path = _fileService.Create(country.Logo, Folder.Countries);
             }
             try
             {
@@ -80,13 +80,13 @@ namespace ClinicSystem.BLL.Services {
                 response.ErrorMessage = ErrorsCodes.IDNotValid.ToString();
                 return response;
             }
-            var data=_countryrepo.Delete(Id);
+            var data = _countryrepo.Delete(Id);
             if (data == null)
             {
                 response.ErrorMessage = ErrorsCodes.InvalidDelete.ToString();
                 return response;
             }
-            if (_fileService.Remove(data.Logo,Folder.Countries))
+            if (_fileService.Remove(data.Logo, Folder.Countries))
             {
                 if (_unit.Commit() > 0)
                 {
@@ -111,7 +111,61 @@ namespace ClinicSystem.BLL.Services {
 
         public ResponseObject Update(int Id, CountryCreateDTO country)
         {
-            throw new NotImplementedException();
+            ResponseObject response = new ResponseObject();
+            string OldPath = string.Empty,
+                     NewPath = string.Empty;
+            if (Id < 0)
+            {
+                response.ErrorMessage = ErrorsCodes.IDNotValid.ToString();
+                return response;
+            }
+            if (country == null)
+            {
+                response.ErrorMessage = ErrorsCodes.InvalidObject.ToString();
+                return response;
+            }
+            var OldEntity = _countryrepo.Find(Id);
+            if (OldEntity == null)
+            {
+                response.ErrorMessage = ErrorsCodes.InvalidObject.ToString();
+                return response;
+            }
+            OldPath = OldEntity.Logo;
+            if (country.Logo == null)
+            {
+                NewPath = null;
+            }
+            else
+            {
+                NewPath = country.Logo.FileName;
+            }
+            try
+            {
+                var result = _countryrepo.Update(Id, country, NewPath);
+                if (result != null)
+                {
+                    if (NewPath != null)
+                    {
+                        if(_fileService.Remove(OldPath, Folder.Countries))
+                        {
+                            _fileService.Create(country.Logo, Folder.Countries);
+                        }
+                    }
+                    if (_unit.Commit() > 0)
+                    {
+                        response.ErrorMessage = ErrorsCodes.Success.ToString();
+                        response.Data = result;
+                        return response;
+                    }
+                }
+                throw new Exception();
+            }
+            catch (Exception)
+            {
+                response.ErrorMessage = ErrorsCodes.InvalidUpadte.ToString();
+                return response;
+            }
         }
     }
 }
+

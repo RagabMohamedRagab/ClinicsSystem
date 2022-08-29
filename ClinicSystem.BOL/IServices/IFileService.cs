@@ -11,6 +11,6 @@ namespace ClinicSystem.BOL.IServices {
         string Create(IFormFile  file,Folder Type );
         bool AllowExtension(string path);
         bool Remove(string path, Folder Type);
-        string Update();
+        bool Find(string path, Folder Type);
     }
 }

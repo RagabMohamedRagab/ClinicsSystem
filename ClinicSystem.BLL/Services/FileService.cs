@@ -31,44 +31,58 @@ namespace ClinicSystem.BLL.Services {
         public string Create(IFormFile file, Folder Type)
         {
             string fileName = string.Empty;
-            if (AllowExtension(file.FileName))
+            if (file != null)
             {
-                string Folder = Path.Combine(_hosting.WebRootPath, Type.ToString());
-                if (!Directory.Exists(Folder))
+                if (AllowExtension(file.FileName))
                 {
-                    Directory.CreateDirectory(Folder);
+                    string Folder = Path.Combine(_hosting.WebRootPath, Type.ToString());
+                    if (!Directory.Exists(Folder))
+                    {
+                        Directory.CreateDirectory(Folder);
+                    }
+                    fileName = file.FileName;
+                    string FullPath = Path.Combine(Folder, fileName);
+                    var stream = new FileStream(FullPath, FileMode.Create);
+                    file.CopyTo(stream);
+                    stream.Close();
+                    return fileName;
                 }
-                fileName = file.FileName;
-                string FullPath = Path.Combine(Folder, fileName);
-                var stream = new FileStream(FullPath, FileMode.Create);
-                file.CopyTo(stream);
-                stream.Close();
-                return fileName;
             }
             return null;
         }
 
+        public bool Find(string path, Folder Type)
+        {
+            if (path != null)
+            {
+                string Folder = Path.Combine(_hosting.WebRootPath, Type.ToString());
+                string FullPath = Path.Combine(Folder, path);
+                if (File.Exists(FullPath))
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
         public bool Remove(string path, Folder Type)
         {
-            string Folder = Path.Combine(_hosting.WebRootPath, Type.ToString());
-            string FullPath = Path.Combine(Folder, path);
+            if (path != null)
+            {
+                string Folder = Path.Combine(_hosting.WebRootPath, Type.ToString());
+                string FullPath = Path.Combine(Folder, path);
                 if (File.Exists(FullPath))
                 {
                     File.Delete(FullPath);
                     return true;
                 }
+            }
             return false;
         }
 
-        public string Update(string path)
-        {
-            throw new NotImplementedException();
-        }
+     
 
-        public string Update()
-        {
-            throw new NotImplementedException();
-        }
+    
     }
 }
 
