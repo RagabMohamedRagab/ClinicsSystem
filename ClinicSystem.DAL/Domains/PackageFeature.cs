@@ -9,8 +9,10 @@ using System.Threading.Tasks;
 namespace ClinicSystem.DAL.Domains {
     public partial class PackageFeature:BaseModel {
         [Required]
+        [MaxLength(200)]
         public string EnDescription { get; set; }
         [Required]
+        [MaxLength(200)]
         public string ArDescription { get; set; }
         [ForeignKey(nameof(Package))]
         public Nullable<int> PackageId { get; set; }

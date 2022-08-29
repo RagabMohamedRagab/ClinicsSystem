@@ -9,8 +9,10 @@ using System.Threading.Tasks;
 namespace ClinicSystem.DAL.Domains {
     public partial class City:BaseModel {
         [Required]
+        [MaxLength(200)]
         public string EnName { get; set; }
         [Required]
+        [MaxLength(200)]
         public string ArName { get; set; }
         [ForeignKey(nameof(Country))]
         public Nullable<int> CountryID { get; set; }

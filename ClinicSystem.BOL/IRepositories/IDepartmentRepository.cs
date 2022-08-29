@@ -14,5 +14,6 @@ namespace ClinicSystem.BOL.IRepositories {
         IEnumerable<GetAllDepartDTOS> GetALLByLang(string lan = "en", int Pagesize = 4, int Pagenumber = 1);
         IEnumerable<DepartMentDTO> GetAllWithOutLang(int Pagesize = 4, int Pagenumber = 1);
         IEnumerable<DepartMentDTO> Find(string Name);
+        DepartMentDTO FindById(int Id);
     }
 }

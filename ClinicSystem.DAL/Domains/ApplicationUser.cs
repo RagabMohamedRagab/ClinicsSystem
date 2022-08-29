@@ -15,16 +15,22 @@ namespace ClinicSystem.DAL.Domains {
             Appointments = new HashSet<Appointment>();
         }
         [Required]
+        [MaxLength(200)]
         public string FullName { get; set; }
+        [MaxLength(200)]
         public string About { get; set; }
         [Required]
+        [MaxLength(14)]
         public string NationalID { get; set; }
         [DataType(DataType.DateTime)]
         public DateTime DateOfBirth { get; set; }
+        [MaxLength(200)]
         public string LandLine { get; set; }
         public virtual Gender Gender { get; set; }
         public int AccountNumber { get; set; }
+        [MaxLength(200)]
         public string BankName { get; set; }
+        [MaxLength(200)]
         public string Note { get; set; }
         public string ImgUrl { get; set; }
         [ForeignKey(nameof(DepartMent))]

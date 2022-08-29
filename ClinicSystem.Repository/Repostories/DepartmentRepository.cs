@@ -60,11 +60,11 @@ namespace ClinicSystem.Repositories.Repostories {
             if (departMents.Any())
             {
                 departMentDTOs = _mapper.Map<IEnumerable<DepartMentDTO>>(departMents).Skip(skip).Take(Pagesize);
-                if (lan == "en")
+                if (lan.ToLower() == "en")
                 {
                     allDepartDTOS = departMentDTOs.Select(b => new GetAllDepartDTOS() { Name = b.EnName });
                 }
-                else if(lan=="ar")
+                else 
                 {
                     allDepartDTOS = departMentDTOs.Select(b => new GetAllDepartDTOS() { Name = b.ArName });
                 }
@@ -86,13 +86,19 @@ namespace ClinicSystem.Repositories.Repostories {
             }
             return null;
         }
-
         public IEnumerable<DepartMentDTO> Find(string Name)
         {
-            var result = GetAll().Where(b=>!b.IsDeleted).Where(b => b.ArName == Name || b.EnName == Name);
+            var result = GetAll().Where(b=>!b.IsDeleted).Where(b => b.ArName.ToLower().Contains(Name.ToLower()) || b.EnName.ToLower().Contains(Name.ToLower()));
             if (result == null)
                 return null;
             return _mapper.Map<IEnumerable<DepartMentDTO>>(result);
+        }
+        public DepartMentDTO FindById(int Id)
+        {
+            var result = GetAll().Where(b => !b.IsDeleted).SingleOrDefault(b => b.Id == Id);
+            if (result == null)
+                return null;
+            return _mapper.Map<DepartMentDTO>(result);
         }
     }
 }

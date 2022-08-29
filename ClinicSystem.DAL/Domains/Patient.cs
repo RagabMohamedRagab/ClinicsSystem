@@ -15,17 +15,24 @@ namespace ClinicSystem.DAL.Domains {
             PatientDrugs=new HashSet<PatientDrug>();
         }
         [Required]
+        [MaxLength(200)]
         public string FullName { get; set; }
         [Required]
+        [MaxLength(20)]
         public string NationalID { get; set; }
         public DateTime DateOfBirth { get; set; }
+        [MaxLength(200)]
         public string CompanyName { get; set; }
         public int PolicyName { get; set; }
         public int Insurancenumber{get;set;}
         [Required]
+        [MaxLength(20)]
         public string Phone1 { get; set; }
+        [MaxLength(20)]
         public string phone2 { get; set; }
+        [MaxLength(200)]
         public string Address { get; set; }
+        [MaxLength(200)]
         public string Note { get; set; }
         public virtual Gender Gender { get; set; }
         public virtual MaritalStatus MaritalStatus { get; set; }

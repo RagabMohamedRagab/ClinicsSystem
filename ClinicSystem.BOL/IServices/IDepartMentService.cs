@@ -14,5 +14,6 @@ namespace ClinicSystem.BOL.IServices {
         ResponseObject GetALLDepart(string lang = "en", int Pagesize = 4, int Pagenumber = 1);
         ResponseObject GetAllWithOutLang(int Pagesize = 4, int Pagenumber = 1);
         ResponseObject Find(string Name);
+        ResponseObject FindById(int Id);
     }
 }

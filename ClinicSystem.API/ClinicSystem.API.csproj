@@ -24,4 +24,8 @@
     <ProjectReference Include="..\ClinicSystem.UnitOfWork\ClinicSystem.UnitOfWork.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\Countries\" />
+  </ItemGroup>
+
 </Project>

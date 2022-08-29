@@ -10,8 +10,10 @@ using System.Threading.Tasks;
 namespace ClinicSystem.DAL.Domains {
     public partial class Break:BaseModel {
         [Required]
+        [MaxLength(200)]
         public string EnName { get; set; }
         [Required]
+        [MaxLength(200)]
         public string ArName { get; set; }
         public virtual Week Weeek { get; set; }
         [DataType(DataType.Time)]

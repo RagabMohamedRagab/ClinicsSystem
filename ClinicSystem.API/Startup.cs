@@ -40,14 +40,17 @@ namespace ClinicSystem.API {
       
             services.AddIdentity<ApplicationUser, IdentityRole>().AddEntityFrameworkStores<ClinicDbContext>().AddDefaultTokenProviders();
             services.AddDbContext<ClinicDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("Clinic")));
-            services.AddAutoMapper(typeof(automapper));
+            services.AddAutoMapper(typeof(Automapper));
             services.AddTransient<IUnitOfWorkPattern, UnitOfWorkPattern>();
             #region Repositories
             services.AddTransient(typeof (IGenericRepository<>),typeof (GenericRepository<>));
             services.AddTransient<IDepartmentRepository, DepartmentRepository>();
+            services.AddTransient<ICountryRepository, CountryRepository>();
             #endregion
             #region Services
             services.AddTransient<IDepartMentService,DepartMentService>();
+            services.AddTransient<IFileService, FileService>();
+            services.AddTransient<ICountryService, CountryService>();
             #endregion
             services.AddControllers();
             services.AddSwaggerGen(c =>

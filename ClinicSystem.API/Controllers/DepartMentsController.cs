@@ -8,7 +8,6 @@ namespace ClinicSystem.API.Controllers {
     [ApiController]
     public class DepartMentsController : ControllerBase {
         private readonly IDepartMentService _departService;
-
         public DepartMentsController(IDepartMentService departService)
         {
             _departService = departService;
@@ -53,6 +52,13 @@ namespace ClinicSystem.API.Controllers {
         public IActionResult Search([FromQuery]string Name)
         {
             var result = _departService.Find(Name);
+            return Ok(result);
+        }
+        [HttpGet]
+        [Route("SearchById")]
+        public IActionResult Search(int Id)
+        {
+            var result=_departService.FindById(Id);
             return Ok(result);
         }
     }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,6 +10,7 @@ namespace ClinicSystem.DAL.Domains {
         public Nullable<int> ServiceId  { get; set; }
         public virtual Service Service { get; set; }
         public string ImageUrl { get; set; }
+        [MaxLength(200)]
         public string Notes { get; set; }
 
     }

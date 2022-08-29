@@ -13,6 +13,9 @@ namespace ClinicSystem.Helpers.Enum {
         InvalidUpadte=4,
         NotSaveChangesInDatabase=5,
         ThrowException=6,
-        ParameteresNotCorrect=7
+        ParameteresNotCorrect=7,
+        ImageIsNotValid=8,
+        ExtentioPNGANDJPG=9,
+        InvalidDelete = 10,
     }
 }

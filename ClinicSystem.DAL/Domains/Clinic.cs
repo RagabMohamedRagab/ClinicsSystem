@@ -17,12 +17,16 @@ namespace ClinicSystem.DAL.Domains {
             ClinicPackages=new HashSet<ClinicPackage>();
         }
         [Required]
+        [MaxLength(200)]
         public string EnName { get; set; }
         [Required]
+        [MaxLength(200)]
         public string  ArName { get; set; }
         [Required]
+        [MaxLength(20)]
         public string Phone { get; set; }
         [Required]
+        [MaxLength(200)]
         public string LandLine { get; set; }
         public string Logo { get; set; }
         [DataType(DataType.DateTime)]

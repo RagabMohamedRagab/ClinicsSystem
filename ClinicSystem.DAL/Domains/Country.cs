@@ -12,9 +12,12 @@ namespace ClinicSystem.DAL.Domains {
             Cities=new HashSet<City>();
         }
         [Required]
+        [MaxLength(200)]
         public string EnName { get; set; }
         [Required]
+        [MaxLength(200)]
         public string ArName { get; set; }
+        public string Logo { get; set; }
         public virtual ICollection<City> Cities { get; set;}
     }
 }

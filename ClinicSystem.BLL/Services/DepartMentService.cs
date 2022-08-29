@@ -55,7 +55,7 @@ namespace ClinicSystem.BLL.Services {
         public ResponseObject Delete(int Id)
         {
             ResponseObject responseObject = new ResponseObject();
-            if (Id == 0)
+            if (Id <= 0)
             {
                 responseObject.ErrorMessage = ErrorsCodes.IDNotValid.ToString();
                 return responseObject;
@@ -178,6 +178,24 @@ namespace ClinicSystem.BLL.Services {
                 return response;
             }
             response.ErrorMessage = ErrorsCodes.NotSaveChangesInDatabase.ToString();
+            return response;
+        }
+      public  ResponseObject FindById(int Id)
+        {
+            ResponseObject response=new ResponseObject();
+            if(Id <= 0)
+            {
+                response.ErrorMessage = ErrorsCodes.IDNotValid.ToString();
+                return response;
+            }
+            var depart= _department.FindById(Id);
+            if(depart == null)
+            {
+                response.ErrorMessage = ErrorsCodes.InvalidObject.ToString();
+                return response;
+            }
+            response.ErrorMessage = ErrorsCodes.Success.ToString();
+            response.Data = depart;
             return response;
         }
     }
