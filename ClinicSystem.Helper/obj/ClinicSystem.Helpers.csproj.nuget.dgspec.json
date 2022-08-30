@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\pc\\Desktop\\New folder (4)\\ClinicSystem.Helper\\ClinicSystem.Helpers.csproj": {}
+    "C:\\Users\\pc\\Desktop\\New folder (8)\\ClinicSystem.Helper\\ClinicSystem.Helpers.csproj": {}
   },
   "projects": {
-    "C:\\Users\\pc\\Desktop\\New folder (4)\\ClinicSystem.Helper\\ClinicSystem.Helpers.csproj": {
+    "C:\\Users\\pc\\Desktop\\New folder (8)\\ClinicSystem.Helper\\ClinicSystem.Helpers.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\pc\\Desktop\\New folder (4)\\ClinicSystem.Helper\\ClinicSystem.Helpers.csproj",
+        "projectUniqueName": "C:\\Users\\pc\\Desktop\\New folder (8)\\ClinicSystem.Helper\\ClinicSystem.Helpers.csproj",
         "projectName": "ClinicSystem.Helpers",
-        "projectPath": "C:\\Users\\pc\\Desktop\\New folder (4)\\ClinicSystem.Helper\\ClinicSystem.Helpers.csproj",
+        "projectPath": "C:\\Users\\pc\\Desktop\\New folder (8)\\ClinicSystem.Helper\\ClinicSystem.Helpers.csproj",
         "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\pc\\Desktop\\New folder (4)\\ClinicSystem.Helper\\obj\\",
+        "outputPath": "C:\\Users\\pc\\Desktop\\New folder (8)\\ClinicSystem.Helper\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

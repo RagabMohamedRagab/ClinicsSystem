@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "PMmkzYJs+theWxa05ilRfdDNu8kRb2MK2Q/AW5VsESUFMkfzh0V/00DyfHHtnAWGwZvzI7M1Y35KH2KS1sQM1A==",
+  "dgSpecHash": "ctupiu1ffD3qhk5vggECX8lEscDLVI7o8mWHNtTP+3rDQSQncdhADpmmXXxVzYZ93lwsFFP/XbHj55rRi1R8Fg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\pc\\Desktop\\New folder (4)\\ClinicSystem.BOL\\ClinicSystem.BOL.csproj",
+  "projectFilePath": "C:\\Users\\pc\\Desktop\\New folder (8)\\ClinicSystem.BOL\\ClinicSystem.BOL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\pc\\.nuget\\packages\\automapper\\11.0.1\\automapper.11.0.1.nupkg.sha512",
     "C:\\Users\\pc\\.nuget\\packages\\microsoft.aspnetcore.authentication\\2.2.0\\microsoft.aspnetcore.authentication.2.2.0.nupkg.sha512",

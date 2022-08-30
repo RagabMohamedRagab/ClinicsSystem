@@ -7036,11 +7036,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\pc\\Desktop\\New folder (4)\\ClinicSystem.API\\ClinicSystem.API.csproj",
+      "projectUniqueName": "C:\\Users\\pc\\Desktop\\New folder (8)\\ClinicSystem.API\\ClinicSystem.API.csproj",
       "projectName": "ClinicSystem.API",
-      "projectPath": "C:\\Users\\pc\\Desktop\\New folder (4)\\ClinicSystem.API\\ClinicSystem.API.csproj",
+      "projectPath": "C:\\Users\\pc\\Desktop\\New folder (8)\\ClinicSystem.API\\ClinicSystem.API.csproj",
       "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\pc\\Desktop\\New folder (4)\\ClinicSystem.API\\obj\\",
+      "outputPath": "C:\\Users\\pc\\Desktop\\New folder (8)\\ClinicSystem.API\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -7061,17 +7061,17 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\pc\\Desktop\\New folder (4)\\ClinicSystem.BLL\\ClinicSystem.BLL.csproj": {
-              "projectPath": "C:\\Users\\pc\\Desktop\\New folder (4)\\ClinicSystem.BLL\\ClinicSystem.BLL.csproj"
+            "C:\\Users\\pc\\Desktop\\New folder (8)\\ClinicSystem.BLL\\ClinicSystem.BLL.csproj": {
+              "projectPath": "C:\\Users\\pc\\Desktop\\New folder (8)\\ClinicSystem.BLL\\ClinicSystem.BLL.csproj"
             },
-            "C:\\Users\\pc\\Desktop\\New folder (4)\\ClinicSystem.BOL\\ClinicSystem.BOL.csproj": {
-              "projectPath": "C:\\Users\\pc\\Desktop\\New folder (4)\\ClinicSystem.BOL\\ClinicSystem.BOL.csproj"
+            "C:\\Users\\pc\\Desktop\\New folder (8)\\ClinicSystem.BOL\\ClinicSystem.BOL.csproj": {
+              "projectPath": "C:\\Users\\pc\\Desktop\\New folder (8)\\ClinicSystem.BOL\\ClinicSystem.BOL.csproj"
             },
-            "C:\\Users\\pc\\Desktop\\New folder (4)\\ClinicSystem.DAL\\ClinicSystem.DAL.csproj": {
-              "projectPath": "C:\\Users\\pc\\Desktop\\New folder (4)\\ClinicSystem.DAL\\ClinicSystem.DAL.csproj"
+            "C:\\Users\\pc\\Desktop\\New folder (8)\\ClinicSystem.DAL\\ClinicSystem.DAL.csproj": {
+              "projectPath": "C:\\Users\\pc\\Desktop\\New folder (8)\\ClinicSystem.DAL\\ClinicSystem.DAL.csproj"
             },
-            "C:\\Users\\pc\\Desktop\\New folder (4)\\ClinicSystem.Mappers\\ClinicSystem.Mappers.csproj": {
-              "projectPath": "C:\\Users\\pc\\Desktop\\New folder (4)\\ClinicSystem.Mappers\\ClinicSystem.Mappers.csproj"
+            "C:\\Users\\pc\\Desktop\\New folder (8)\\ClinicSystem.Mappers\\ClinicSystem.Mappers.csproj": {
+              "projectPath": "C:\\Users\\pc\\Desktop\\New folder (8)\\ClinicSystem.Mappers\\ClinicSystem.Mappers.csproj"
             }
           }
         }

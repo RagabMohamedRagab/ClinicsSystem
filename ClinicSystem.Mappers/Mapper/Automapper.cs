@@ -26,6 +26,7 @@ namespace ClinicSystem.Mappers.Mapper {
             #region City
             CreateMap<City, CityDTO>().ReverseMap();
             CreateMap<City, CityUpdateDTO>().ReverseMap();
+            CreateMap<City, allCitiesDTO>().ReverseMap();
             #endregion
         }
     }

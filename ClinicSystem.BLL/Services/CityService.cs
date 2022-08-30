@@ -63,18 +63,19 @@ namespace ClinicSystem.BLL.Services {
             ResponseObject response = new ResponseObject();
             try
             {
-                if (Id <=0) {
+                if (Id <= 0)
+                {
                     response.ErrorMessage = ErrorsCodes.IDNotValid.ToString();
                     return response;
                 }
                 var result = _cityRespostory.Delete(Id);
-                if(result != null)
+                if (result != null)
                 {
                     if (_unit.Commit() > 0)
                     {
                         response.ErrorMessage = ErrorsCodes.Success.ToString();
                         response.Data = result;
-                        return response ;
+                        return response;
                     }
                 }
                 response.ErrorMessage = ErrorsCodes.NotFound.ToString();
@@ -84,9 +85,11 @@ namespace ClinicSystem.BLL.Services {
             {
                 response.ErrorMessage = ErrorsCodes.ThrowException.ToString();
                 return response;
-                
+
             }
         }
+
+
 
         public ResponseObject Update(int Id, CityUpdateDTO city)
         {
@@ -97,7 +100,7 @@ namespace ClinicSystem.BLL.Services {
                 {
                     response.ErrorMessage = ErrorsCodes.IDNotValid.ToString();
                     return response;
-                
+
                 }
                 if (city == null)
                 {
@@ -109,8 +112,8 @@ namespace ClinicSystem.BLL.Services {
                     response.ErrorMessage = ErrorsCodes.NamesAreNull.ToString();
                     return response;
                 }
-                var Updata=_cityRespostory.Update(Id, city);
-                if(Updata != null)
+                var Updata = _cityRespostory.Update(Id, city);
+                if (Updata != null)
                 {
                     if (_unit.Commit() > 0)
                     {
@@ -128,5 +131,120 @@ namespace ClinicSystem.BLL.Services {
                 return response;
             }
         }
+        public ResponseObject GetAll(int Pagesize = 4, int PageNumber = 1)
+        {
+            ResponseObject response = new ResponseObject();
+            try
+            {
+                if (Pagesize <= 0 || PageNumber <= 0)
+                {
+                    response.ErrorMessage = ErrorsCodes.ParameteresNotCorrect.ToString();
+                    return response;
+                }
+                var cities = _cityRespostory.GetAll(Pagesize, PageNumber);
+                if (cities != null)
+                {
+
+                    response.ErrorMessage = ErrorsCodes.Success.ToString();
+                    response.Data = cities;
+                    return response;
+
+                }
+                response.ErrorMessage = ErrorsCodes.NotFound.ToString();
+                return response;
+            }
+            catch (Exception)
+            {
+                response.ErrorMessage = ErrorsCodes.ThrowException.ToString();
+                return response;
+            }
+
+        }
+        public ResponseObject GetAllByLang(string lang = "en", int Pagesize = 4, int PageNumber = 1)
+        {
+            ResponseObject response = new ResponseObject();
+            try
+            {
+                if (String.IsNullOrEmpty(lang) || PageNumber <= 0 || PageNumber <= 0)
+                {
+                    response.ErrorMessage = ErrorsCodes.ParameteresNotCorrect.ToString();
+                    return response;
+                }
+                var cities = _cityRespostory.GetAllByLang(lang, Pagesize, PageNumber);
+                if (cities != null)
+                {
+                    response.ErrorMessage = ErrorsCodes.Success.ToString();
+                    response.Data = cities;
+                    return response;
+                }
+                response.ErrorMessage = ErrorsCodes.NotFound.ToString();
+                return response;
+            }
+            catch (Exception)
+            {
+                response.ErrorMessage = ErrorsCodes.ThrowException.ToString();
+                return response;
+            }
+        }
+        public ResponseObject SearchByName(string Name)
+        {
+            ResponseObject response = new ResponseObject();
+            try
+            {
+                if (string.IsNullOrEmpty(Name))
+                {
+                    response.ErrorMessage = ErrorsCodes.ParameteresNotCorrect.ToString();
+                    return response;
+                }
+                var cities = _cityRespostory.SearchByName(Name);
+                if (cities.Count()>0)
+                {
+                    response.ErrorMessage = ErrorsCodes.Success.ToString();
+                    response.Data = cities;
+                    return response;
+                }
+                response.ErrorMessage = ErrorsCodes.NotFound.ToString();
+                return response;
+            }
+            catch (Exception)
+            {
+                response.ErrorMessage = ErrorsCodes.ThrowException.ToString();
+                return response;
+            }
+
+        }
+        public ResponseObject SearchById(int id)
+        {
+            ResponseObject response = new ResponseObject();
+            try
+            {
+                if (id <= 0)
+                {
+
+                    response.ErrorMessage = ErrorsCodes.IDNotValid.ToString();
+                    return response;
+
+                }
+                var citydto = _cityRespostory.SearchById(id);
+                if (citydto != null)
+                {
+                    response.ErrorMessage = ErrorsCodes.Success.ToString();
+                    response.Data = citydto;
+                    return response;
+                }
+                response.ErrorMessage = ErrorsCodes.NotFound.ToString();
+                return response;
+            }
+            catch (Exception)
+            {
+                response.ErrorMessage = ErrorsCodes.ThrowException.ToString();
+                return response;
+            }
+
+        }
+
     }
 }
+
+
+

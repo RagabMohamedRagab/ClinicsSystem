@@ -37,8 +37,7 @@
           "ClinicSystem.BLL": "1.0.0",
           "ClinicSystem.BOL": "1.0.0",
           "ClinicSystem.DAL": "1.0.0",
-          "ClinicSystem.Repositories": "1.0.0",
-          "ClinicSystem.UnitOfWork": "1.0.0",
+          "ClinicSystem.Mappers": "1.0.0",
           "Microsoft.EntityFrameworkCore": "5.0.17",
           "Microsoft.EntityFrameworkCore.Design": "5.0.17",
           "Swashbuckle.AspNetCore": "5.6.3",
@@ -1692,11 +1691,29 @@
         }
       },
       "ClinicSystem.Helpers/1.0.0": {
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0"
+        },
         "runtime": {
           "ClinicSystem.Helpers.dll": {}
         },
         "compile": {
           "ClinicSystem.Helpers.dll": {}
+        }
+      },
+      "ClinicSystem.Mappers/1.0.0": {
+        "dependencies": {
+          "AutoMapper.Extensions.Microsoft.DependencyInjection": "11.0.0",
+          "ClinicSystem.BLL": "1.0.0",
+          "ClinicSystem.DAL": "1.0.0",
+          "ClinicSystem.Helpers": "1.0.0",
+          "ClinicSystem.Repositories": "1.0.0"
+        },
+        "runtime": {
+          "ClinicSystem.Mappers.dll": {}
+        },
+        "compile": {
+          "ClinicSystem.Mappers.dll": {}
         }
       },
       "ClinicSystem.Models/1.0.0": {
@@ -4329,6 +4346,11 @@
       "sha512": ""
     },
     "ClinicSystem.Helpers/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ClinicSystem.Mappers/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

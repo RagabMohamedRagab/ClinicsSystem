@@ -22,3 +22,15 @@ C:\Users\pc\Desktop\New folder (4)\ClinicSystem.Helper\obj\Release\net5.0\Clinic
 C:\Users\pc\Desktop\New folder (4)\ClinicSystem.Helper\obj\Release\net5.0\ref\ClinicSystem.Helpers.dll
 C:\Users\pc\Desktop\New folder (4)\ClinicSystem.Helper\obj\Release\net5.0\ClinicSystem.Helpers.pdb
 C:\Users\pc\Desktop\New folder (4)\ClinicSystem.Helper\obj\Release\net5.0\ClinicSystem.Helpers.csproj.AssemblyReference.cache
+C:\Users\pc\Desktop\New folder (8)\ClinicSystem.Helper\bin\Release\net5.0\ClinicSystem.Helpers.deps.json
+C:\Users\pc\Desktop\New folder (8)\ClinicSystem.Helper\bin\Release\net5.0\ClinicSystem.Helpers.dll
+C:\Users\pc\Desktop\New folder (8)\ClinicSystem.Helper\bin\Release\net5.0\ref\ClinicSystem.Helpers.dll
+C:\Users\pc\Desktop\New folder (8)\ClinicSystem.Helper\bin\Release\net5.0\ClinicSystem.Helpers.pdb
+C:\Users\pc\Desktop\New folder (8)\ClinicSystem.Helper\obj\Release\net5.0\ClinicSystem.Helpers.csproj.AssemblyReference.cache
+C:\Users\pc\Desktop\New folder (8)\ClinicSystem.Helper\obj\Release\net5.0\ClinicSystem.Helpers.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\pc\Desktop\New folder (8)\ClinicSystem.Helper\obj\Release\net5.0\ClinicSystem.Helpers.AssemblyInfoInputs.cache
+C:\Users\pc\Desktop\New folder (8)\ClinicSystem.Helper\obj\Release\net5.0\ClinicSystem.Helpers.AssemblyInfo.cs
+C:\Users\pc\Desktop\New folder (8)\ClinicSystem.Helper\obj\Release\net5.0\ClinicSystem.Helpers.csproj.CoreCompileInputs.cache
+C:\Users\pc\Desktop\New folder (8)\ClinicSystem.Helper\obj\Release\net5.0\ClinicSystem.Helpers.dll
+C:\Users\pc\Desktop\New folder (8)\ClinicSystem.Helper\obj\Release\net5.0\ref\ClinicSystem.Helpers.dll
+C:\Users\pc\Desktop\New folder (8)\ClinicSystem.Helper\obj\Release\net5.0\ClinicSystem.Helpers.pdb

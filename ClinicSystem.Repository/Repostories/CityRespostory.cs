@@ -37,12 +37,12 @@ namespace ClinicSystem.Repositories.Repostories {
             try
             {
                 var entity = Find(Id);
-                if (entity != null&&!entity.IsDeleted)
+                if (entity != null && !entity.IsDeleted)
                 {
                     entity.IsDeleted = true;
                     entity.DeletedOn = DateTime.Now;
                     return _mapper.Map<CityDTO>(entity);
-                  }
+                }
                 return null;
             }
             catch (Exception)
@@ -56,11 +56,12 @@ namespace ClinicSystem.Repositories.Repostories {
             try
             {
                 var entityDb = Find(Id);
-                if(entityDb != null && !entityDb.IsDeleted)
+                if (entityDb != null && !entityDb.IsDeleted)
                 {
                     entityDb.EnName = city.EnName;
-                    entityDb.ArName=city.ArName;
+                    entityDb.ArName = city.ArName;
                     entityDb.ModifiedOn = DateTime.Now;
+                    return _mapper.Map<CityDTO>(entityDb);
                 }
                 return null;
             }
@@ -69,12 +70,95 @@ namespace ClinicSystem.Repositories.Repostories {
 
                 return null;
             }
-            throw new NotImplementedException();
+
         }
 
-        IEnumerable<CityDTO> ICityRespostory.GetAll()
+        IEnumerable<CityDTO> ICityRespostory.GetAll(int Pagesize = 4, int PageNumber = 1)
         {
-            throw new NotImplementedException();
+            try
+            {
+                var allcities = GetAll().Where(c => !c.IsDeleted);
+                int skip = (PageNumber - 1) * Pagesize;
+                if (allcities.Count() > 0)
+                {
+                    return _mapper.Map<IEnumerable<CityDTO>>(allcities.Skip(skip).Take(Pagesize));
+                }
+                return null;
+            }
+            catch (Exception)
+            {
+                return null;
+
+            }
+
+
+        }
+        public IEnumerable<allCitiesDTO> GetAllByLang(string lang = "en", int Pagesize = 4, int PageNumber = 1)
+        {
+            try
+            {
+                var alldata = GetAll().Where(b => !b.IsDeleted);
+                IEnumerable<allCitiesDTO> allCities = null;
+                if (alldata.Any())
+                {
+                    if (lang == "en")
+                    {
+                        allCities = alldata.Select(c => new allCitiesDTO { Name = c.EnName, CountryID = c.CountryID });
+                    }
+                    else
+                    {
+                        allCities = alldata.Select(c => new allCitiesDTO { Name = c.ArName, CountryID = c.CountryID });
+                    }
+                    return allCities;
+                }
+                return null;
+            }
+            catch (Exception)
+            {
+
+                return null;
+            }
+
+        }
+
+        public IEnumerable<CityDTO> SearchByName(string Name)
+        {
+            try
+            {
+                var alldata = GetAll().Where(b => !b.IsDeleted);
+                if (alldata.Count() > 0)
+                {
+                    var cities = alldata.Where(b => b.ArName.ToLower().Contains(Name.ToLower()) || b.EnName.ToLower().Contains(Name.ToLower()));
+                    return _mapper.Map<IEnumerable<CityDTO>>(cities);
+                }
+                return null;
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+
+        }
+        public CityDTO SearchById(int id)
+        {
+            try
+            {
+                var city = Find(id);
+                if (city != null&!city.IsDeleted)
+                {
+                    return _mapper.Map<CityDTO>(city);
+                }
+                return null;
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+
         }
     }
 }
+
+
+
+

@@ -38,3 +38,24 @@ C:\Users\pc\Desktop\Clinic\ClinicSystem.Repository\obj\Debug\net5.0\ref\ClinicSy
 C:\Users\pc\Desktop\Clinic\ClinicSystem.Repository\obj\Debug\net5.0\ClinicSystem.Repositories.pdb
 C:\Users\pc\Desktop\Clinic\ClinicSystem.Repository\bin\Debug\net5.0\ClinicSystem.Models.dll
 C:\Users\pc\Desktop\Clinic\ClinicSystem.Repository\bin\Debug\net5.0\ClinicSystem.Models.pdb
+C:\Users\pc\Desktop\New folder (8)\ClinicSystem.Repository\bin\Debug\net5.0\ClinicSystem.Repositories.deps.json
+C:\Users\pc\Desktop\New folder (8)\ClinicSystem.Repository\bin\Debug\net5.0\ClinicSystem.Repositories.dll
+C:\Users\pc\Desktop\New folder (8)\ClinicSystem.Repository\bin\Debug\net5.0\ref\ClinicSystem.Repositories.dll
+C:\Users\pc\Desktop\New folder (8)\ClinicSystem.Repository\bin\Debug\net5.0\ClinicSystem.Repositories.pdb
+C:\Users\pc\Desktop\New folder (8)\ClinicSystem.Repository\bin\Debug\net5.0\ClinicSystem.BOL.dll
+C:\Users\pc\Desktop\New folder (8)\ClinicSystem.Repository\bin\Debug\net5.0\ClinicSystem.DAL.dll
+C:\Users\pc\Desktop\New folder (8)\ClinicSystem.Repository\bin\Debug\net5.0\ClinicSystem.Helpers.dll
+C:\Users\pc\Desktop\New folder (8)\ClinicSystem.Repository\bin\Debug\net5.0\ClinicSystem.Models.dll
+C:\Users\pc\Desktop\New folder (8)\ClinicSystem.Repository\bin\Debug\net5.0\ClinicSystem.BOL.pdb
+C:\Users\pc\Desktop\New folder (8)\ClinicSystem.Repository\bin\Debug\net5.0\ClinicSystem.DAL.pdb
+C:\Users\pc\Desktop\New folder (8)\ClinicSystem.Repository\bin\Debug\net5.0\ClinicSystem.Models.pdb
+C:\Users\pc\Desktop\New folder (8)\ClinicSystem.Repository\bin\Debug\net5.0\ClinicSystem.Helpers.pdb
+C:\Users\pc\Desktop\New folder (8)\ClinicSystem.Repository\obj\Debug\net5.0\ClinicSystem.Repositories.csproj.AssemblyReference.cache
+C:\Users\pc\Desktop\New folder (8)\ClinicSystem.Repository\obj\Debug\net5.0\ClinicSystem.Repositories.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\pc\Desktop\New folder (8)\ClinicSystem.Repository\obj\Debug\net5.0\ClinicSystem.Repositories.AssemblyInfoInputs.cache
+C:\Users\pc\Desktop\New folder (8)\ClinicSystem.Repository\obj\Debug\net5.0\ClinicSystem.Repositories.AssemblyInfo.cs
+C:\Users\pc\Desktop\New folder (8)\ClinicSystem.Repository\obj\Debug\net5.0\ClinicSystem.Repositories.csproj.CoreCompileInputs.cache
+C:\Users\pc\Desktop\New folder (8)\ClinicSystem.Repository\obj\Debug\net5.0\ClinicSystem.Repositories.csproj.CopyComplete
+C:\Users\pc\Desktop\New folder (8)\ClinicSystem.Repository\obj\Debug\net5.0\ClinicSystem.Repositories.dll
+C:\Users\pc\Desktop\New folder (8)\ClinicSystem.Repository\obj\Debug\net5.0\ref\ClinicSystem.Repositories.dll
+C:\Users\pc\Desktop\New folder (8)\ClinicSystem.Repository\obj\Debug\net5.0\ClinicSystem.Repositories.pdb

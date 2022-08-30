@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "XcUmak4lnM3PSxyDCsHOoo746Q8mL5QAw0WPPY7e0rOgkU2LzvBxhqUDU+rxn5oeWv7+SIFrbnbMgfX0Sm0P3Q==",
+  "dgSpecHash": "Fe5u2IP97kQVyEiDKORbAv6zxOUmdHQ9YQEMXbyyZzl2wTNdSksjORYdFoMZT3lO3y8baQRQ7LkovTsrFeQdpg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\pc\\Desktop\\New folder (4)\\ClinicSystem.Helper\\ClinicSystem.Helpers.csproj",
+  "projectFilePath": "C:\\Users\\pc\\Desktop\\New folder (8)\\ClinicSystem.Helper\\ClinicSystem.Helpers.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\pc\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512"
   ],

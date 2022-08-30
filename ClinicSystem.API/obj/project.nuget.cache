@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "P4pVUvdVLZleYvjQtLENucEgQhNe/TY55qOzVMTsBPw9agpnyQspigAVh9wELzF2mUVYuumtuNlvNJ2ghSuLhg==",
+  "dgSpecHash": "/K2m1A+83jvLdfugIl/44kJmL6i/wQEYZH8ygV/9jxQkFVbhpd6BLnaM4CjS9GgM20y/6PWhM48HW+38Locw6w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\pc\\Desktop\\New folder (4)\\ClinicSystem.API\\ClinicSystem.API.csproj",
+  "projectFilePath": "C:\\Users\\pc\\Desktop\\New folder (8)\\ClinicSystem.API\\ClinicSystem.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\pc\\.nuget\\packages\\automapper\\11.0.1\\automapper.11.0.1.nupkg.sha512",
     "C:\\Users\\pc\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\11.0.0\\automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",

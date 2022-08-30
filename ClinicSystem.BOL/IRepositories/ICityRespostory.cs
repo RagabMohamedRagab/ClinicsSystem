@@ -10,6 +10,9 @@ namespace ClinicSystem.BOL.IRepositories {
         CityDTO Create(CityDTO city);
         CityDTO Update(int Id, CityUpdateDTO city);
         CityDTO Delete(int Id);
-        IEnumerable<CityDTO> GetAll();
+        IEnumerable<CityDTO> GetAll(int Pagesize=4,int PageNumber=1);
+        IEnumerable<allCitiesDTO> GetAllByLang(string lang="en",int Pagesize = 4, int PageNumber = 1);
+        IEnumerable<CityDTO> SearchByName(string Name);
+     CityDTO SearchById(int id);
     }
 }

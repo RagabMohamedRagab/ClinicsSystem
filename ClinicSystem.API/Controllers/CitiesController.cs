@@ -34,6 +34,34 @@ namespace ClinicSystem.API.Controllers {
             var result = _cityService.Update(Id, model);    
             return Ok(result);
         }
+        [HttpGet]
+        [Route("GetAll")]
+        public IActionResult GetAll(int PageSize=4,int PageNumber = 1)
+        {
+            var result=_cityService.GetAll(PageSize, PageNumber);
+            return Ok(result);
+        }
+        [HttpGet]
+        [Route("GetAllByLang")]
+        public IActionResult GetAll(string Lang="en",int PageSize = 4, int PageNumber = 1)
+        {
+            var result = _cityService.GetAllByLang(Lang, PageSize, PageNumber);
+            return Ok(result);
+        }
+        [HttpGet]
+        [Route("SearchByName")]
+        public IActionResult Search(string Name)
+        {
+            var result=_cityService.SearchByName(Name);
+            return Ok(result);
+        }
+        [HttpGet]
+        [Route("SearchById")]
+        public IActionResult Search(int Id)
+        {
+            var result = _cityService.SearchById(Id);
+            return Ok(result);
+        }
     }
 }
 
