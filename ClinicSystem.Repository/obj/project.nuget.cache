@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "RqYdOtbAyClfkTshzAKK3KqYPaBeWOq8QI09Bcok9vvlpsu52TCYhBSqfLJBK3PRPYPsZokvtJ1dqodkjPo1mw==",
+  "dgSpecHash": "61ucI0HVcZoO+FZvN6QPcWnjjPuoENm/CZclW4YvScQj4ehaH+Ta/7IMGRvyQBqDNVo4ftv00iRoFkLjWdcwOg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\pc\\Desktop\\Clinic\\ClinicSystem.Repository\\ClinicSystem.Repositories.csproj",
+  "projectFilePath": "C:\\Users\\pc\\Desktop\\New folder (4)\\ClinicSystem.Repository\\ClinicSystem.Repositories.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\pc\\.nuget\\packages\\automapper\\11.0.1\\automapper.11.0.1.nupkg.sha512",
     "C:\\Users\\pc\\.nuget\\packages\\microsoft.aspnetcore.authentication\\2.2.0\\microsoft.aspnetcore.authentication.2.2.0.nupkg.sha512",
@@ -34,7 +34,7 @@
     "C:\\Users\\pc\\.nuget\\packages\\microsoft.extensions.caching.memory\\5.0.0\\microsoft.extensions.caching.memory.5.0.0.nupkg.sha512",
     "C:\\Users\\pc\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\5.0.0\\microsoft.extensions.configuration.abstractions.5.0.0.nupkg.sha512",
     "C:\\Users\\pc\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\5.0.2\\microsoft.extensions.dependencyinjection.5.0.2.nupkg.sha512",
-    "C:\\Users\\pc\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\5.0.0\\microsoft.extensions.dependencyinjection.abstractions.5.0.0.nupkg.sha512",
+    "C:\\Users\\pc\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
     "C:\\Users\\pc\\.nuget\\packages\\microsoft.extensions.fileproviders.abstractions\\2.2.0\\microsoft.extensions.fileproviders.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\pc\\.nuget\\packages\\microsoft.extensions.hosting.abstractions\\2.2.0\\microsoft.extensions.hosting.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\pc\\.nuget\\packages\\microsoft.extensions.identity.core\\5.0.17\\microsoft.extensions.identity.core.5.0.17.nupkg.sha512",

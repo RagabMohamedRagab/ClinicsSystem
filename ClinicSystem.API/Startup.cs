@@ -4,7 +4,8 @@ using ClinicSystem.BOL.IRepositories;
 using ClinicSystem.BOL.IServices;
 using ClinicSystem.DAL.Context;
 using ClinicSystem.DAL.Domains;
-using ClinicSystem.Models.Mapper;
+using ClinicSystem.Helpers.Configurtions;
+using ClinicSystem.Mappers.Mapper;
 using ClinicSystem.Repositories.Repostories;
 using ClinicSystem.Repository;
 using ClinicSystem.UnitOfWork;
@@ -41,17 +42,7 @@ namespace ClinicSystem.API {
             services.AddIdentity<ApplicationUser, IdentityRole>().AddEntityFrameworkStores<ClinicDbContext>().AddDefaultTokenProviders();
             services.AddDbContext<ClinicDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("Clinic")));
             services.AddAutoMapper(typeof(Automapper));
-            services.AddTransient<IUnitOfWorkPattern, UnitOfWorkPattern>();
-            #region Repositories
-            services.AddTransient(typeof (IGenericRepository<>),typeof (GenericRepository<>));
-            services.AddTransient<IDepartmentRepository, DepartmentRepository>();
-            services.AddTransient<ICountryRepository, CountryRepository>();
-            #endregion
-            #region Services
-            services.AddTransient<IDepartMentService,DepartMentService>();
-            services.AddTransient<IFileService, FileService>();
-            services.AddTransient<ICountryService, CountryService>();
-            #endregion
+            Configuretion.RegisterServiceDependencies(services);
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {

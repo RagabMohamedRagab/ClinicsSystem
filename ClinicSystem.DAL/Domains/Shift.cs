@@ -1,4 +1,4 @@
-﻿using ClinicSystem.Helper.Enum;
+﻿using ClinicSystem.Helpers.Enums;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;

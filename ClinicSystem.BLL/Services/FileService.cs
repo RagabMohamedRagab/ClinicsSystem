@@ -1,5 +1,5 @@
 ﻿using ClinicSystem.BOL.IServices;
-using ClinicSystem.Helpers.Enum;
+using ClinicSystem.Helpers.Enums;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using System;

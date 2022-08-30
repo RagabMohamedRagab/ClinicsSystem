@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ClinicSystem.Helper.Enum {
+namespace ClinicSystem.Helpers.Enums {
     public enum Week {
         Saturday=1,
         Sunday=2,

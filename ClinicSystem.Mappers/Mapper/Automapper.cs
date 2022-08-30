@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using ClinicSystem.DAL.Domains;
+using ClinicSystem.Models.DTOS.City;
 using ClinicSystem.Models.DTOS.Country;
 using ClinicSystem.Models.DTOS.Department;
 using System;
@@ -8,7 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ClinicSystem.Models.Mapper {
+namespace ClinicSystem.Mappers.Mapper {
     public class Automapper : Profile {
         public Automapper()
         {
@@ -21,6 +22,10 @@ namespace ClinicSystem.Models.Mapper {
             CreateMap<Country, CountryDTO>().ReverseMap();
             CreateMap<Country, CountryCreateDTO>().ReverseMap();
             CreateMap<CountryDTO, CountryCreateDTO>().ReverseMap();
+            #endregion
+            #region City
+            CreateMap<City, CityDTO>().ReverseMap();
+            CreateMap<City, CityUpdateDTO>().ReverseMap();
             #endregion
         }
     }

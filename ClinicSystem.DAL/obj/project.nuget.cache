@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "AGy9XwX1TNqpXiX1xq4bAOcPKGAaL0PTZeB0l2mAqrXsfnMUNwSHrGuBXwXj0asadC9khQC8iLb4BHzwotX5mg==",
+  "dgSpecHash": "PaspIpb5097Lxq0/xh+tuh57aeyp1GpqsrhWGzNa+EqJQZPyKAgaB59MxIoAf+cu2QilJ5fCFhNtP3+j1AQ7tQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\pc\\Desktop\\Clinic\\ClinicSystem.DAL\\ClinicSystem.DAL.csproj",
+  "projectFilePath": "C:\\Users\\pc\\Desktop\\New folder (4)\\ClinicSystem.DAL\\ClinicSystem.DAL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\pc\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\pc\\.nuget\\packages\\microsoft.aspnetcore.authentication\\2.2.0\\microsoft.aspnetcore.authentication.2.2.0.nupkg.sha512",
@@ -36,7 +36,7 @@
     "C:\\Users\\pc\\.nuget\\packages\\microsoft.extensions.caching.memory\\5.0.0\\microsoft.extensions.caching.memory.5.0.0.nupkg.sha512",
     "C:\\Users\\pc\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\5.0.0\\microsoft.extensions.configuration.abstractions.5.0.0.nupkg.sha512",
     "C:\\Users\\pc\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\5.0.2\\microsoft.extensions.dependencyinjection.5.0.2.nupkg.sha512",
-    "C:\\Users\\pc\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\5.0.0\\microsoft.extensions.dependencyinjection.abstractions.5.0.0.nupkg.sha512",
+    "C:\\Users\\pc\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
     "C:\\Users\\pc\\.nuget\\packages\\microsoft.extensions.fileproviders.abstractions\\2.2.0\\microsoft.extensions.fileproviders.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\pc\\.nuget\\packages\\microsoft.extensions.hosting.abstractions\\2.2.0\\microsoft.extensions.hosting.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\pc\\.nuget\\packages\\microsoft.extensions.identity.core\\5.0.17\\microsoft.extensions.identity.core.5.0.17.nupkg.sha512",

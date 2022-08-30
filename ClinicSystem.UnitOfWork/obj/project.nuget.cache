@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "KwZdGo0VzWPGupbs1fScRrnuvcEfX9YY6Xr13AdVUA4Ng0W39Gpq30QJbhVrJ/bwCkBdpcd+8AnLeV8vvBUW+Q==",
+  "dgSpecHash": "N1n1cx+anBBZ88UdOZ9jzfCm5TyFCkpQ94a9HrWxVEz/8vgQ8HL52laSAQzqaAkk2FH6GHCAOlmEJ9n2+0Yc5A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\pc\\Desktop\\Clinic\\ClinicSystem.UnitOfWork\\ClinicSystem.UnitOfWork.csproj",
+  "projectFilePath": "C:\\Users\\pc\\Desktop\\New folder (4)\\ClinicSystem.UnitOfWork\\ClinicSystem.UnitOfWork.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\pc\\.nuget\\packages\\microsoft.aspnetcore.authentication\\2.2.0\\microsoft.aspnetcore.authentication.2.2.0.nupkg.sha512",
     "C:\\Users\\pc\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",
@@ -33,7 +33,7 @@
     "C:\\Users\\pc\\.nuget\\packages\\microsoft.extensions.caching.memory\\5.0.0\\microsoft.extensions.caching.memory.5.0.0.nupkg.sha512",
     "C:\\Users\\pc\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\5.0.0\\microsoft.extensions.configuration.abstractions.5.0.0.nupkg.sha512",
     "C:\\Users\\pc\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\5.0.2\\microsoft.extensions.dependencyinjection.5.0.2.nupkg.sha512",
-    "C:\\Users\\pc\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\5.0.0\\microsoft.extensions.dependencyinjection.abstractions.5.0.0.nupkg.sha512",
+    "C:\\Users\\pc\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
     "C:\\Users\\pc\\.nuget\\packages\\microsoft.extensions.fileproviders.abstractions\\2.2.0\\microsoft.extensions.fileproviders.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\pc\\.nuget\\packages\\microsoft.extensions.hosting.abstractions\\2.2.0\\microsoft.extensions.hosting.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\pc\\.nuget\\packages\\microsoft.extensions.identity.core\\5.0.17\\microsoft.extensions.identity.core.5.0.17.nupkg.sha512",

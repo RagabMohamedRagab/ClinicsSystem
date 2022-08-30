@@ -1,6 +1,6 @@
 ﻿using ClinicSystem.BOL.IRepositories;
 using ClinicSystem.BOL.IServices;
-using ClinicSystem.Helpers.Enum;
+using ClinicSystem.Helpers.Enums;
 using ClinicSystem.Models.DTOS.Department;
 using ClinicSystem.Models.ResponseObjects;
 using ClinicSystem.UnitOfWork;

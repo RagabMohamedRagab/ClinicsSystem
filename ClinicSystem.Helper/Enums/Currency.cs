@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ClinicSystem.Helper.Enum {
+namespace ClinicSystem.Helpers.Enums {
     public enum Currency {
         [Description("Egyptian pound,")]
         EGP=0,

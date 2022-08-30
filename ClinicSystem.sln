@@ -9,15 +9,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClinicSystem.Helpers", "Cli
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClinicSystem.API", "ClinicSystem.API\ClinicSystem.API.csproj", "{E3F0E12F-F533-4E42-95EF-AB40F630FAB2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClinicSystem.UnitOfWork", "ClinicSystem.UnitOfWork\ClinicSystem.UnitOfWork.csproj", "{CF7F343A-6AE2-4071-B6A5-B415888C01E9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClinicSystem.UnitOfWork", "ClinicSystem.UnitOfWork\ClinicSystem.UnitOfWork.csproj", "{CF7F343A-6AE2-4071-B6A5-B415888C01E9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClinicSystem.BLL", "ClinicSystem.BLL\ClinicSystem.BLL.csproj", "{57C0C9D4-1E79-4FFF-99CF-F5692740E881}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClinicSystem.BLL", "ClinicSystem.BLL\ClinicSystem.BLL.csproj", "{57C0C9D4-1E79-4FFF-99CF-F5692740E881}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClinicSystem.BOL", "ClinicSystem.BOL\ClinicSystem.BOL.csproj", "{DB11D38A-1563-42A9-A5DA-A7DC00E8BCD8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClinicSystem.BOL", "ClinicSystem.BOL\ClinicSystem.BOL.csproj", "{DB11D38A-1563-42A9-A5DA-A7DC00E8BCD8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClinicSystem.Repositories", "ClinicSystem.Repository\ClinicSystem.Repositories.csproj", "{115965FE-882A-4800-BC51-0AA6F39B89EA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClinicSystem.Repositories", "ClinicSystem.Repository\ClinicSystem.Repositories.csproj", "{115965FE-882A-4800-BC51-0AA6F39B89EA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClinicSystem.Models", "ClinicSystem.Models\ClinicSystem.Models.csproj", "{2E1AD472-AE61-468D-B417-1FF3EFDC8123}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClinicSystem.Models", "ClinicSystem.Models\ClinicSystem.Models.csproj", "{2E1AD472-AE61-468D-B417-1FF3EFDC8123}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClinicSystem.Mappers", "ClinicSystem.Mappers\ClinicSystem.Mappers.csproj", "{58D7882F-F7B2-4960-BC33-886E75B12A3A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +59,10 @@ Global
 		{2E1AD472-AE61-468D-B417-1FF3EFDC8123}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2E1AD472-AE61-468D-B417-1FF3EFDC8123}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2E1AD472-AE61-468D-B417-1FF3EFDC8123}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58D7882F-F7B2-4960-BC33-886E75B12A3A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58D7882F-F7B2-4960-BC33-886E75B12A3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58D7882F-F7B2-4960-BC33-886E75B12A3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58D7882F-F7B2-4960-BC33-886E75B12A3A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

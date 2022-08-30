@@ -1,4 +1,4 @@
-﻿using ClinicSystem.Helpers.Enum;
+﻿using ClinicSystem.Helpers.Enums;
 using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;

@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ClinicSystem.Helper.Enum {
+namespace ClinicSystem.Helpers.Enums {
     public enum Active {
         [Description("غير مفعل")]
         OFF=0,
