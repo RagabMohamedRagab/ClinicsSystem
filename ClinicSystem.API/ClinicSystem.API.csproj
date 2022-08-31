@@ -17,7 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ClinicSystem.BLL\ClinicSystem.BLL.csproj" />
+
     <ProjectReference Include="..\ClinicSystem.BOL\ClinicSystem.BOL.csproj" />
     <ProjectReference Include="..\ClinicSystem.DAL\ClinicSystem.DAL.csproj" />
     <ProjectReference Include="..\ClinicSystem.Mappers\ClinicSystem.Mappers.csproj" />

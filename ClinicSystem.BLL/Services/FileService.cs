@@ -1,5 +1,6 @@
 ﻿using ClinicSystem.BOL.IServices;
 using ClinicSystem.Helpers.Enums;
+using Grpc.Core;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using System;
@@ -9,7 +10,7 @@ using System.Linq;
 using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
-
+using System.Web;
 namespace ClinicSystem.BLL.Services {
     public class FileService : IFileService {
         private readonly IHostingEnvironment _hosting;
@@ -45,7 +46,7 @@ namespace ClinicSystem.BLL.Services {
                     var stream = new FileStream(FullPath, FileMode.Create);
                     file.CopyTo(stream);
                     stream.Close();
-                    return fileName;
+                    return fileName; 
                 }
             }
             return null;
@@ -85,6 +86,4 @@ namespace ClinicSystem.BLL.Services {
     
     }
 }
-
-
 

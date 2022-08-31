@@ -29,7 +29,7 @@ namespace ClinicSystem.API.Controllers {
         }
         [HttpPut]
         [Route("Update")]
-        public IActionResult Update(int Id, [FromForm] CityUpdateDTO model)
+        public IActionResult Update(int Id, [FromForm] CityDTO model)
         {
             var result = _cityService.Update(Id, model);    
             return Ok(result);

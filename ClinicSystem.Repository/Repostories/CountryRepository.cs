@@ -28,7 +28,7 @@ namespace ClinicSystem.Repositories.Repostories {
             if (entity != null)
             {
                 Create(entity);
-                countrydto.Logo = "/" + Folder.Countries.ToString() + "/" + path;
+                countrydto.Logo ="/Countries/"+  path;
                 return countrydto;
             }
             return null;
@@ -57,7 +57,7 @@ namespace ClinicSystem.Repositories.Repostories {
               var allcountries=_mapper.Map<IEnumerable<CountryDTO>>(countries);
                 foreach (var item in allcountries)
                 {
-                    item.Logo = "/" + Folder.Countries.ToString() + "/" + item.Logo;
+                    item.Logo = "/Countries/"+  item.Logo;
                 }
                 return allcountries;
             }
@@ -92,7 +92,7 @@ namespace ClinicSystem.Repositories.Repostories {
             if (country != null && !country.IsDeleted) 
             {
                var countrydto=_mapper.Map<CountryDTO>(country);
-                countrydto.Logo = "/" + Folder.Countries.ToString() + "/" + countrydto.Logo;
+                countrydto.Logo =  countrydto.Logo;
                 return countrydto;
             }
             return null;
@@ -104,7 +104,7 @@ namespace ClinicSystem.Repositories.Repostories {
                           ArName = country.ArName,
                           PathUrl = path;
             var EntityDb = Find(Id);
-            if (!EntityDb.IsDeleted)
+            if (!EntityDb.IsDeleted&&EntityDb!=null)
             {
 
                 if (EName == null && ArName != null && PathUrl != null)
@@ -161,7 +161,7 @@ namespace ClinicSystem.Repositories.Repostories {
                 {
                     ArName = EntityDb.ArName,
                     EnName = EntityDb.EnName,
-                    Logo = "/" + Folder.Countries.ToString() + "/" + EntityDb.Logo,
+                    Logo = "/Countries/" + EntityDb.Logo,
                 };
                 return dTO;
             }

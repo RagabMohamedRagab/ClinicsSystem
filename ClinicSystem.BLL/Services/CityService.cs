@@ -91,7 +91,7 @@ namespace ClinicSystem.BLL.Services {
 
 
 
-        public ResponseObject Update(int Id, CityUpdateDTO city)
+        public ResponseObject Update(int Id, CityDTO city)
         {
             ResponseObject response = new ResponseObject();
             try
@@ -242,6 +242,16 @@ namespace ClinicSystem.BLL.Services {
             }
 
         }
+        public ResponseObject DropDownListCities(int Id)
+        {
+            ResponseObject response = new ResponseObject();
+            if (Id <= 0)
+            {
+
+            }
+            return null;
+        }
+      
 
     }
 }

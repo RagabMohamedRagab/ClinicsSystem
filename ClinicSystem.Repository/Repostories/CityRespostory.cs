@@ -51,19 +51,71 @@ namespace ClinicSystem.Repositories.Repostories {
             }
         }
 
-        public CityDTO Update(int Id, CityUpdateDTO city)
+        public CityDTO Update(int Id, CityDTO city)
         {
             try
             {
-                var entityDb = Find(Id);
-                if (entityDb != null && !entityDb.IsDeleted)
+                string EName = city.EnName,
+                    ArName = city.ArName;
+                int?    CountryId = city.CountryID;
+                var EntityDb = Find(Id);
+                if (EntityDb != null && !EntityDb.IsDeleted)
                 {
-                    entityDb.EnName = city.EnName;
-                    entityDb.ArName = city.ArName;
-                    entityDb.ModifiedOn = DateTime.Now;
-                    return _mapper.Map<CityDTO>(entityDb);
+                    if (EName == null && ArName != null && CountryId != null)
+                    {
+                        EntityDb.ArName = ArName;
+                        EntityDb.CountryID = CountryId;
+                        EntityDb.ModifiedOn = DateTime.Now;
+
+                    }
+                    else if (ArName == null && EName != null && CountryId != null)
+                    {
+                        EntityDb.EnName = EName;
+                        EntityDb.CountryID = CountryId;
+                        EntityDb.ModifiedOn = DateTime.Now;
+
+                    }
+                    else if (CountryId == null && EName != null && ArName != null)
+                    {
+                        EntityDb.ArName = ArName;
+                        EntityDb.EnName = EName;
+                        EntityDb.ModifiedOn = DateTime.Now;
+                    }
+                    else if (CountryId == null && EName == null && ArName != null)
+                    {
+                        EntityDb.ArName = ArName;
+                        EntityDb.ModifiedOn = DateTime.Now;
+
+                    }
+                    else if (CountryId != null && EName == null && ArName == null)
+                    {
+                        EntityDb.CountryID = CountryId;
+                        EntityDb.ModifiedOn = DateTime.Now;
+
+                    }
+                    else if (CountryId == null && EName != null && ArName == null)
+                    {
+                        EntityDb.EnName = EName;
+                        EntityDb.ModifiedOn = DateTime.Now;
+
+                    }
+                    else if (CountryId != null && EName != null && ArName != null)
+                    {
+                        EntityDb.EnName = EName;
+                        EntityDb.ArName = ArName;
+                        EntityDb.CountryID = CountryId;
+                        EntityDb.ModifiedOn = DateTime.Now;
+                    }
+                    else
+                    {
+                        return null;
+                    }
                 }
-                return null;
+                else
+                {
+                    return null;
+                }
+                return _mapper.Map<CityDTO>(city);
             }
             catch (Exception)
             {
@@ -155,6 +207,11 @@ namespace ClinicSystem.Repositories.Repostories {
                 return null;
             }
 
+        }
+
+        public IEnumerable<CityUpdateDTO> DropDownListCities(int Id)
+        {
+            throw new NotImplementedException();
         }
     }
 }

@@ -142,7 +142,7 @@ namespace ClinicSystem.BLL.Services {
             ResponseObject response = new ResponseObject();
             string OldPath = string.Empty,
                      NewPath = string.Empty;
-            if (Id < 0)
+            if (Id <= 0)
             {
                 response.ErrorMessage = ErrorsCodes.IDNotValid.ToString();
                 return response;
@@ -176,14 +176,17 @@ namespace ClinicSystem.BLL.Services {
                     {
                         if (_fileService.Remove(OldPath, Folder.Countries))
                         {
-                            _fileService.Create(country.Logo, Folder.Countries);
+                            var Path = _fileService.Create(country.Logo, Folder.Countries);
+                            if (Path != null)
+                            {
+                                if (_unit.Commit() > 0)
+                                {
+                                    response.ErrorMessage = ErrorsCodes.Success.ToString();
+                                    response.Data = result;
+                                    return response;
+                                }
+                            }
                         }
-                    }
-                    if (_unit.Commit() > 0)
-                    {
-                        response.ErrorMessage = ErrorsCodes.Success.ToString();
-                        response.Data = result;
-                        return response;
                     }
                 }
                 response.ErrorMessage = ErrorsCodes.InvalidUpadte.ToString();
@@ -228,6 +231,7 @@ namespace ClinicSystem.BLL.Services {
                 response.ErrorMessage = ErrorsCodes.NotFound.ToString();
                 return response;
             }
+            ok.Logo = "/Countries/" + ok.Logo;
             response.ErrorMessage = ErrorsCodes.Success.ToString();
             response.Data = ok;
             return response;

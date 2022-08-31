@@ -25,3 +25,30 @@ C:\Users\pc\Desktop\New folder (8)\ClinicSystem.Mappers\obj\Debug\net5.0\ClinicS
 C:\Users\pc\Desktop\New folder (8)\ClinicSystem.Mappers\obj\Debug\net5.0\ClinicSystem.Mappers.dll
 C:\Users\pc\Desktop\New folder (8)\ClinicSystem.Mappers\obj\Debug\net5.0\ref\ClinicSystem.Mappers.dll
 C:\Users\pc\Desktop\New folder (8)\ClinicSystem.Mappers\obj\Debug\net5.0\ClinicSystem.Mappers.pdb
+C:\Users\pc\Desktop\Clinic\ClinicSystem.Mappers\bin\Debug\net5.0\ClinicSystem.Mappers.deps.json
+C:\Users\pc\Desktop\Clinic\ClinicSystem.Mappers\bin\Debug\net5.0\ClinicSystem.Mappers.dll
+C:\Users\pc\Desktop\Clinic\ClinicSystem.Mappers\bin\Debug\net5.0\ref\ClinicSystem.Mappers.dll
+C:\Users\pc\Desktop\Clinic\ClinicSystem.Mappers\bin\Debug\net5.0\ClinicSystem.Mappers.pdb
+C:\Users\pc\Desktop\Clinic\ClinicSystem.Mappers\bin\Debug\net5.0\ClinicSystem.BLL.dll
+C:\Users\pc\Desktop\Clinic\ClinicSystem.Mappers\bin\Debug\net5.0\ClinicSystem.BOL.dll
+C:\Users\pc\Desktop\Clinic\ClinicSystem.Mappers\bin\Debug\net5.0\ClinicSystem.DAL.dll
+C:\Users\pc\Desktop\Clinic\ClinicSystem.Mappers\bin\Debug\net5.0\ClinicSystem.Helpers.dll
+C:\Users\pc\Desktop\Clinic\ClinicSystem.Mappers\bin\Debug\net5.0\ClinicSystem.Models.dll
+C:\Users\pc\Desktop\Clinic\ClinicSystem.Mappers\bin\Debug\net5.0\ClinicSystem.Repositories.dll
+C:\Users\pc\Desktop\Clinic\ClinicSystem.Mappers\bin\Debug\net5.0\ClinicSystem.UnitOfWork.dll
+C:\Users\pc\Desktop\Clinic\ClinicSystem.Mappers\bin\Debug\net5.0\ClinicSystem.BLL.pdb
+C:\Users\pc\Desktop\Clinic\ClinicSystem.Mappers\bin\Debug\net5.0\ClinicSystem.DAL.pdb
+C:\Users\pc\Desktop\Clinic\ClinicSystem.Mappers\bin\Debug\net5.0\ClinicSystem.Helpers.pdb
+C:\Users\pc\Desktop\Clinic\ClinicSystem.Mappers\bin\Debug\net5.0\ClinicSystem.Repositories.pdb
+C:\Users\pc\Desktop\Clinic\ClinicSystem.Mappers\bin\Debug\net5.0\ClinicSystem.BOL.pdb
+C:\Users\pc\Desktop\Clinic\ClinicSystem.Mappers\bin\Debug\net5.0\ClinicSystem.Models.pdb
+C:\Users\pc\Desktop\Clinic\ClinicSystem.Mappers\bin\Debug\net5.0\ClinicSystem.UnitOfWork.pdb
+C:\Users\pc\Desktop\Clinic\ClinicSystem.Mappers\obj\Debug\net5.0\ClinicSystem.Mappers.csproj.AssemblyReference.cache
+C:\Users\pc\Desktop\Clinic\ClinicSystem.Mappers\obj\Debug\net5.0\ClinicSystem.Mappers.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\pc\Desktop\Clinic\ClinicSystem.Mappers\obj\Debug\net5.0\ClinicSystem.Mappers.AssemblyInfoInputs.cache
+C:\Users\pc\Desktop\Clinic\ClinicSystem.Mappers\obj\Debug\net5.0\ClinicSystem.Mappers.AssemblyInfo.cs
+C:\Users\pc\Desktop\Clinic\ClinicSystem.Mappers\obj\Debug\net5.0\ClinicSystem.Mappers.csproj.CoreCompileInputs.cache
+C:\Users\pc\Desktop\Clinic\ClinicSystem.Mappers\obj\Debug\net5.0\ClinicSystem.Mappers.csproj.CopyComplete
+C:\Users\pc\Desktop\Clinic\ClinicSystem.Mappers\obj\Debug\net5.0\ClinicSystem.Mappers.dll
+C:\Users\pc\Desktop\Clinic\ClinicSystem.Mappers\obj\Debug\net5.0\ref\ClinicSystem.Mappers.dll
+C:\Users\pc\Desktop\Clinic\ClinicSystem.Mappers\obj\Debug\net5.0\ClinicSystem.Mappers.pdb
