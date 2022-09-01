@@ -8,5 +8,7 @@ using System.Threading.Tasks;
 namespace ClinicSystem.BOL.IRepositories {
     public interface IServiceRepository {
         ServiceCreateDTO Create(ServiceDTO service,string Path);
+        ServiceCreateDTO Update(ServiceUpdateDTO service,string path);
+        ServiceCreateDTO FindById(int Id);
     }
 }

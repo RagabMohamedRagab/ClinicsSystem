@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 namespace ClinicSystem.BOL.IServices {
     public interface IServiceService {
         ResponseObject Create(ServiceDTO service);
+        ResponseObject Update(int Id,ServiceUpdateDTO service);
+       ResponseObject FindById(int Id);
 
     }
 }

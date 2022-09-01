@@ -20,5 +20,18 @@ namespace ClinicSystem.API.Controllers {
         {
             return Ok(_serviceService.Create(service));
         }
+       // [HttpPatch]
+       // [Route("Update")]
+       //public IActionResult Update(int Id,[FromForm] ServiceUpdateDTO service)
+       // {
+
+       //     return Ok();
+       // }
+        [HttpGet]
+        [Route("FindById")]
+        public IActionResult FindById (int Id)
+        {
+            return Ok(_serviceService.FindById(Id));
+        }
     }
 }

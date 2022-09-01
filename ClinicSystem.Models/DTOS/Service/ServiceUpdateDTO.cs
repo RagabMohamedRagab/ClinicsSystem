@@ -7,17 +7,10 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace ClinicSystem.Models.DTOS.Service {
-    public class ServiceDTO {
+    public  class ServiceUpdateDTO {
         [Required]
-        public string EnName { get; set; }
-        [Required]
-        public string ArName { get; set; }
-        [Required]
-        public decimal Price { get; set; }
-        public string Note { get; set; }
-        [Required]
+      public decimal Price { get; set; }
+        public string  Note{ get; set; }
         public IFormFile File { get; set; }
-
     }
 }
-

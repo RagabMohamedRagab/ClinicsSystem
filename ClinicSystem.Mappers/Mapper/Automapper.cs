@@ -31,6 +31,7 @@ namespace ClinicSystem.Mappers.Mapper {
             #endregion
             #region Services
             CreateMap<ServiceDTO, Service>().ReverseMap();
+            CreateMap<ServiceUpdate, Service>().ReverseMap();
             CreateMap<ServiceCreateDTO, Service>().ReverseMap();
             #endregion
         }

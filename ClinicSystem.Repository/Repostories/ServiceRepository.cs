@@ -41,5 +41,20 @@ namespace ClinicSystem.Repositories.Repostories {
                 return null;
             }
         }
+        public ServiceCreateDTO Update(ServiceUpdateDTO service,string path)
+        {
+            return null;
+        }
+        public ServiceCreateDTO FindById(int Id)
+        {
+            var entity = Find(Id);
+            if (entity != null && !entity.IsDeleted)
+            {
+                var data = _mapper.Map<ServiceCreateDTO>(entity);
+                data.ImageUrl = "/" + Folder.Services.ToString() + "/" + entity.ImageUrl;
+                return data;
+            }
+            return null;
+        }
     }
 }
