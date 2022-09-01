@@ -8,10 +8,7 @@ using System.Threading.Tasks;
 
 namespace ClinicSystem.DAL.Domains {
     public partial class Service:BaseModel {
-        public Service()
-        {
-            ServiceImages=new HashSet<ServiceImage>();
-        }
+     
         [Required]
         [MaxLength(200)]
         public string EnName { get; set; }
@@ -22,8 +19,7 @@ namespace ClinicSystem.DAL.Domains {
         public decimal Price { get; set; }
         [MaxLength(200)]
         public string Notes { get; set; }
-      
+      public string ImageUrl { get; set; }
         public virtual ICollection<ClinicService> ClinicServices { get; set; }
-        public virtual ICollection<ServiceImage> ServiceImages { get; set; }
     }
 }

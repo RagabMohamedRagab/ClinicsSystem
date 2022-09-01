@@ -18,8 +18,6 @@ namespace ClinicSystem.DAL.Domains {
         [MaxLength(200)]
         public string Notes { get; set; }
         public int Number { get; set; }
-        [ForeignKey(nameof(VisitType))]
-        public Nullable<int> VisitTypeId { get; set; }
-        public virtual VisitType VisitType { get; set; }
+
     }
 }

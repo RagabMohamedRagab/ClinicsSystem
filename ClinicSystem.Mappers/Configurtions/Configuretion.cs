@@ -22,12 +22,14 @@ namespace ClinicSystem.Helpers.Configurtions {
             services.AddTransient<IDepartmentRepository, DepartmentRepository>();
             services.AddTransient<ICountryRepository, CountryRepository>();
             services.AddScoped<ICityRespostory,CityRespostory>();
+            services.AddScoped<IServiceRepository, ServiceRepository>();
             #endregion
             #region Services
             services.AddTransient<IDepartMentService, DepartMentService>();
             services.AddTransient<IFileService, FileService>();
             services.AddTransient<ICountryService, CountryService>();
             services.AddTransient<ICityService, CityService>();
+            services.AddTransient<IServiceService, ServiceService>();
             #endregion
             return services;
         }

@@ -177,16 +177,13 @@ namespace ClinicSystem.BLL.Services {
                         if (_fileService.Remove(OldPath, Folder.Countries))
                         {
                             var Path = _fileService.Create(country.Logo, Folder.Countries);
-                            if (Path != null)
-                            {
-                                if (_unit.Commit() > 0)
-                                {
-                                    response.ErrorMessage = ErrorsCodes.Success.ToString();
-                                    response.Data = result;
-                                    return response;
-                                }
-                            }
                         }
+                    }
+                    if (_unit.Commit() > 0)
+                    {
+                        response.ErrorMessage = ErrorsCodes.Success.ToString();
+                        response.Data = result;
+                        return response;
                     }
                 }
                 response.ErrorMessage = ErrorsCodes.InvalidUpadte.ToString();

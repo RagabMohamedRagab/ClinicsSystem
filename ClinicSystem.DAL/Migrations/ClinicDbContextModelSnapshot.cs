@@ -203,16 +203,11 @@ namespace ClinicSystem.DAL.Migrations
                     b.Property<int?>("PatientId")
                         .HasColumnType("int");
 
-                    b.Property<int?>("VisitTypeId")
-                        .HasColumnType("int");
-
                     b.HasKey("Id");
 
                     b.HasIndex("DoctorId");
 
                     b.HasIndex("PatientId");
-
-                    b.HasIndex("VisitTypeId");
 
                     b.ToTable("Appointments");
                 });
@@ -917,6 +912,9 @@ namespace ClinicSystem.DAL.Migrations
                         .HasMaxLength(200)
                         .HasColumnType("nvarchar(200)");
 
+                    b.Property<string>("ImageUrl")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
@@ -933,42 +931,6 @@ namespace ClinicSystem.DAL.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Services");
-                });
-
-            modelBuilder.Entity("ClinicSystem.DAL.Domains.ServiceImage", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<DateTime>("CraetedOn")
-                        .HasColumnType("datetime2(7)");
-
-                    b.Property<DateTime?>("DeletedOn")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("ImageUrl")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("IsDeleted")
-                        .HasColumnType("bit");
-
-                    b.Property<DateTime?>("ModifiedOn")
-                        .HasColumnType("datetime2(7)");
-
-                    b.Property<string>("Notes")
-                        .HasMaxLength(200)
-                        .HasColumnType("nvarchar(200)");
-
-                    b.Property<int?>("ServiceId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("ServiceId");
-
-                    b.ToTable("ServiceImages");
                 });
 
             modelBuilder.Entity("ClinicSystem.DAL.Domains.Shift", b =>
@@ -1017,41 +979,6 @@ namespace ClinicSystem.DAL.Migrations
                     b.HasIndex("ClinicId");
 
                     b.ToTable("Shifts");
-                });
-
-            modelBuilder.Entity("ClinicSystem.DAL.Domains.VisitType", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("ArName")
-                        .HasMaxLength(200)
-                        .HasColumnType("nvarchar(200)");
-
-                    b.Property<DateTime>("CraetedOn")
-                        .HasColumnType("datetime2(7)");
-
-                    b.Property<DateTime?>("DeletedOn")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("EnName")
-                        .HasMaxLength(200)
-                        .HasColumnType("nvarchar(200)");
-
-                    b.Property<bool>("IsDeleted")
-                        .HasColumnType("bit");
-
-                    b.Property<DateTime?>("ModifiedOn")
-                        .HasColumnType("datetime2(7)");
-
-                    b.Property<decimal>("Price")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("VisitTypes");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -1231,15 +1158,9 @@ namespace ClinicSystem.DAL.Migrations
                         .WithMany("Appointments")
                         .HasForeignKey("PatientId");
 
-                    b.HasOne("ClinicSystem.DAL.Domains.VisitType", "VisitType")
-                        .WithMany("Appointments")
-                        .HasForeignKey("VisitTypeId");
-
                     b.Navigation("Patient");
 
                     b.Navigation("User");
-
-                    b.Navigation("VisitType");
                 });
 
             modelBuilder.Entity("ClinicSystem.DAL.Domains.Break", b =>
@@ -1339,15 +1260,6 @@ namespace ClinicSystem.DAL.Migrations
                         .HasForeignKey("PatientId");
 
                     b.Navigation("Patient");
-                });
-
-            modelBuilder.Entity("ClinicSystem.DAL.Domains.ServiceImage", b =>
-                {
-                    b.HasOne("ClinicSystem.DAL.Domains.Service", "Service")
-                        .WithMany("ServiceImages")
-                        .HasForeignKey("ServiceId");
-
-                    b.Navigation("Service");
                 });
 
             modelBuilder.Entity("ClinicSystem.DAL.Domains.Shift", b =>
@@ -1473,13 +1385,6 @@ namespace ClinicSystem.DAL.Migrations
             modelBuilder.Entity("ClinicSystem.DAL.Domains.Service", b =>
                 {
                     b.Navigation("ClinicServices");
-
-                    b.Navigation("ServiceImages");
-                });
-
-            modelBuilder.Entity("ClinicSystem.DAL.Domains.VisitType", b =>
-                {
-                    b.Navigation("Appointments");
                 });
 #pragma warning restore 612, 618
         }
