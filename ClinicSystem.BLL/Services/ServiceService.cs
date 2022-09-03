@@ -87,25 +87,36 @@ namespace ClinicSystem.BLL.Services {
                 response.ErrorMessage = ErrorsCodes.InvalidObject.ToString();
                 return response;
             }
-            var updateEntity = _serviceRepository.Update(Id, service);
-            if(updateEntity != null)
+            try
             {
-                if (service.File != null)
+                var updateEntity = _serviceRepository.Update(Id, service);
+                if (updateEntity != null)
                 {
-                    if (_fileService.Remove(oldentity, Folder.Services)) // You Must send image As =>  [Name].Extension
+                    if (service.File != null)
                     {
-                        _fileService.Create(service.File, Folder.Services);
+                        if (_fileService.Remove(oldentity, Folder.Services)) // You Must send image As =>  [Name].Extension
+                        {
+                            if (_fileService.Create(service.File, Folder.Services) != null)
+                            {
+                                if (_unit.Commit() > 0)
+                                {
+                                    response.ErrorMessage = ErrorsCodes.Success.ToString();
+                                    response.Data = updateEntity;
+                                    return response;
+                                }
+                            }
+                        }
                     }
                 }
-                if (_unit.Commit() > 0)
-                {
-                    response.ErrorMessage = ErrorsCodes.Success.ToString();
-                    response.Data = updateEntity;
-                    return response;
-                }
+                response.ErrorMessage = ErrorsCodes.InvalidUpadte.ToString();
+                return response;
             }
-            response.ErrorMessage= ErrorsCodes.InvalidUpadte.ToString();
-            return response;
+            catch (Exception)
+            {
+                response.ErrorMessage = ErrorsCodes.InvalidUpadte.ToString();
+                return response;
+            }
+          
        
         }
         public ResponseObject FindById(int Id)
@@ -124,6 +135,31 @@ namespace ClinicSystem.BLL.Services {
             }
             response.ErrorMessage = ErrorsCodes.Success.ToString();
             response.Data = entity;
+            return response;
+        }
+        public ResponseObject Delete(int Id)
+        {
+            ResponseObject response = new ResponseObject();
+            if (Id <= 0)
+            {
+                response.ErrorMessage = ErrorsCodes.IDNotValid.ToString();
+                return response;
+            }
+            var data = _serviceRepository.Delete(Id);
+            if (data != null)
+            {
+                if (_fileService.Remove(data.ImageUrl, Folder.Services))
+                {
+                    if (_unit.Commit() > 0)
+                    {
+                        response.ErrorMessage = ErrorsCodes.Success.ToString();
+                        response.Data = "Done";
+                        return response;
+                    }
+                }
+            }
+            response.ErrorMessage = ErrorsCodes.InvalidDelete.ToString();
+            response.Data = "Failed";
             return response;
         }
     }

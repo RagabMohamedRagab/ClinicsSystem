@@ -33,5 +33,11 @@ namespace ClinicSystem.API.Controllers {
         {
             return Ok(_serviceService.FindById(Id));
         }
+        [HttpDelete]
+       [Route("Delete")]
+       public IActionResult Delete(int Id)
+        {
+            return Ok(_serviceService.Delete(Id));
+        }
     }
 }

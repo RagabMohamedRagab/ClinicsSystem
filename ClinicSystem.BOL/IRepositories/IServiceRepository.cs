@@ -11,5 +11,7 @@ namespace ClinicSystem.BOL.IRepositories {
         ServiceCreateDTO Update(int Id,ServiceUpdateDTO service);
         ServiceCreateDTO FindById(int Id);
         string FindImag(int Id);
+        ServiceCreateDTO Delete(int Id);
+        //IEnumerable<ServiceCreateDTO> GetAllWithoutLang(int PageSize=4,int PageNumber=1);
     }
 }

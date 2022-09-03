@@ -116,5 +116,26 @@ namespace ClinicSystem.Repositories.Repostories {
             }
             return null;
         }
+        public ServiceCreateDTO Delete(int Id)
+        {
+            var entityDb = Find(Id);
+            if (entityDb != null && !entityDb.IsDeleted)
+            {
+                entityDb.IsDeleted = true;
+                entityDb.ModifiedOn = DateTime.Now;
+                return _mapper.Map<ServiceCreateDTO>(entityDb);
+            }
+            return null;
+        }
+        //public IEnumerable<ServiceCreateDTO> GetAllWithoutLang(int PageSize = 4, int PageNumber = 1)
+        //{
+        //    int skip = (PageNumber - 1) * PageSize;
+        //    var Data = GetAll().Where(b => b.IsDeleted);
+        //    IEnumerable<ServiceCreateDTO> 
+        //    if (Data.Any())
+        //    {
+
+        //    }
+        //}
     }
 }

@@ -11,6 +11,7 @@ namespace ClinicSystem.BOL.IServices {
         ResponseObject Create(ServiceDTO service);
         ResponseObject Update(int Id,ServiceUpdateDTO service);
        ResponseObject FindById(int Id);
+        ResponseObject Delete(int Id);
 
     }
 }
