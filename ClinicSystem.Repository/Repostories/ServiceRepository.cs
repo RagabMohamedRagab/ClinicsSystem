@@ -12,14 +12,14 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace ClinicSystem.Repositories.Repostories {
-    public class ServiceRepository :GenericRepository<Service>, IServiceRepository {
+    public class ServiceRepository : GenericRepository<Service>, IServiceRepository {
         private readonly IMapper _mapper;
         public ServiceRepository(ClinicDbContext clinic, IMapper mapper) : base(clinic)
         {
             _mapper = mapper;
         }
 
-        public ServiceCreateDTO  Create(ServiceDTO service,string Path)
+        public ServiceCreateDTO Create(ServiceDTO service, string Path)
         {
             try
             {
@@ -41,11 +41,11 @@ namespace ClinicSystem.Repositories.Repostories {
                 return null;
             }
         }
-        public ServiceCreateDTO Update(int Id,ServiceUpdateDTO service)
+        public ServiceCreateDTO Update(int Id, ServiceUpdateDTO service)
         {
             string Note = service.Note,
                      Path = service.File.FileName;
-            decimal price=service.Price;
+            decimal price = service.Price;
             var entitDb = Find(Id);
             if (Note != null && Path == null && price <= 0)
             {
@@ -73,7 +73,8 @@ namespace ClinicSystem.Repositories.Repostories {
             {
                 entitDb.ImageUrl = Path;
                 entitDb.Notes = Note;
-            }else if(Note != null && Path != null && price > 0)
+            }
+            else if (Note != null && Path != null && price > 0)
             {
                 entitDb.ImageUrl = Path;
                 entitDb.Price = price;
@@ -127,15 +128,73 @@ namespace ClinicSystem.Repositories.Repostories {
             }
             return null;
         }
-        //public IEnumerable<ServiceCreateDTO> GetAllWithoutLang(int PageSize = 4, int PageNumber = 1)
-        //{
-        //    int skip = (PageNumber - 1) * PageSize;
-        //    var Data = GetAll().Where(b => b.IsDeleted);
-        //    IEnumerable<ServiceCreateDTO> 
-        //    if (Data.Any())
-        //    {
+        public IEnumerable<AllServices> GetAllWithLang(string lang = "en", int PageSize = 4, int PageNumber = 1)
+        {
+            int skip = (PageNumber - 1) * PageSize;
+            var Data = GetAll().Where(b => !b.IsDeleted).Skip(skip).Take(PageSize);
+            if (Data.Any())
+            {
+                if (lang.ToLower() == "en")
+                {
+                    return Data.Select(b => new AllServices()
+                    {
+                        Name = b.EnName,
+                        Price = b.Price,
+                        Notes = b.Notes,
+                        ImageUrl = "/" + Folder.Services.ToString() + "/" + b.ImageUrl,
+                    });
+                }
+                else
+                {
+                    return Data.Select(b => new AllServices()
+                    {
+                        Name = b.ArName,
+                        Price = b.Price,
+                        Notes = b.Notes,
+                        ImageUrl = "/" + Folder.Services.ToString() + "/" + b.ImageUrl,
+                    });
+                }
+            }
+            return null;
+        }
+        public IEnumerable<ServiceCreateDTO> GetAllWithoutLang(int PageSize = 4, int PageNumber = 1)
+        {
+            int skip = (PageNumber - 1) * PageSize;
+            var Data = GetAll().Where(b => !b.IsDeleted).Skip(skip).Take(PageSize);
+            if (Data.Any())
+            {
+                return Data.Select(b => new ServiceCreateDTO()
+                {
+                    ArName = b.ArName,
+                    EnName = b.EnName,
+                    Price = b.Price,
+                    Notes = b.Notes,
+                    ImageUrl = "/" + Folder.Services.ToString() + "/" + b.ImageUrl,
+                });
+            }
+            return null;
+        }
 
-        //    }
-        //}
+        public IEnumerable<ServiceCreateDTO> FindByName(string Name)
+        {
+            var Data = GetAll().Where(b => !b.IsDeleted);
+            if (Data.Any())
+            {
+                return Data.Where(b => b.ArName.ToLower().Contains(Name.ToLower()) || b.EnName.ToLower().Contains(Name.ToLower()))
+                    .Select(a => new ServiceCreateDTO
+                    {
+                        ArName = a.ArName,
+                        EnName = a.EnName,
+                        Price = a.Price,
+                        Notes = a.Notes,
+                        ImageUrl = "/" + Folder.Services.ToString() + "/" + a.ImageUrl,
+                    });
+            }
+            return null;
+        }
     }
 }
+
+
+
+

@@ -162,5 +162,60 @@ namespace ClinicSystem.BLL.Services {
             response.Data = "Failed";
             return response;
         }
+        public ResponseObject GetAllLang(string lang="en",int PageSize = 4, int PageNumber = 1)
+        {
+            ResponseObject response = new ResponseObject();
+            if (PageNumber <= 0 || PageSize <= 0||String.IsNullOrEmpty(lang))
+            {
+                response.ErrorMessage = ErrorsCodes.ParameteresNotCorrect.ToString();
+                return response;
+            }
+
+            var data = _serviceRepository.GetAllWithLang(lang,PageSize, PageNumber);
+            if (data.Any())
+            {
+                response.ErrorMessage = ErrorsCodes.Success.ToString();
+                response.Data = data;
+                return response;
+            }
+            response.ErrorMessage = ErrorsCodes.NotFound.ToString();
+            return response;
+        }
+        public ResponseObject FindByName(string Name)
+        {
+            ResponseObject response = new ResponseObject();
+            if (String.IsNullOrEmpty(Name))
+            {
+                response.ErrorMessage = ErrorsCodes.NamesAreNull.ToString();
+                return response;
+            }
+            var data = _serviceRepository.FindByName(Name);
+            if (data.Any())
+            {
+                response.ErrorMessage = ErrorsCodes.Success.ToString();
+                response.Data = data;
+                return response;
+            }
+            response.ErrorMessage = ErrorsCodes.NotFound.ToString();
+            return response;
+        }
+        public ResponseObject  GetAllWithoutLang(int PageSize = 4, int PageNumber = 1)
+        {
+            var response = new ResponseObject();
+            if (PageNumber <= 0 || PageSize <= 0)
+            {
+                response.ErrorMessage = ErrorsCodes.ParameteresNotCorrect.ToString();
+                return response;
+            }
+            var allServices=_serviceRepository.GetAllWithoutLang(PageSize, PageNumber);
+            if (allServices.Any())
+            {
+                response.ErrorMessage = ErrorsCodes.Success.ToString();
+                response.Data=allServices;
+                return response;
+            }
+            response.ErrorMessage = ErrorsCodes.NotFound.ToString();
+            return response;
+        }
     }
 }

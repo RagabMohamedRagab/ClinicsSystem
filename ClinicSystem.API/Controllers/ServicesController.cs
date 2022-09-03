@@ -16,7 +16,7 @@ namespace ClinicSystem.API.Controllers {
 
         [HttpPost]
         [Route("Create")]
-        public IActionResult Create([FromForm]ServiceDTO service)
+        public IActionResult Create([FromForm] ServiceDTO service)
         {
             return Ok(_serviceService.Create(service));
         }
@@ -25,19 +25,42 @@ namespace ClinicSystem.API.Controllers {
         public IActionResult Update(int Id, [FromForm] ServiceUpdateDTO service)
         {
 
-            return Ok(_serviceService.Update(Id,service));
+            return Ok(_serviceService.Update(Id, service));
         }
         [HttpGet]
         [Route("FindById")]
-        public IActionResult FindById (int Id)
+        public IActionResult FindById(int Id)
         {
             return Ok(_serviceService.FindById(Id));
         }
         [HttpDelete]
-       [Route("Delete")]
-       public IActionResult Delete(int Id)
+        [Route("Delete")]
+        public IActionResult Delete(int Id)
         {
             return Ok(_serviceService.Delete(Id));
         }
+        [HttpGet]
+        [Route("GetAllByLang")]
+        public IActionResult GetAllWithLang(string lang = "en", int PageSize = 4, int PageNumber = 1)
+        {
+            return Ok(_serviceService.GetAllLang(lang, PageSize, PageNumber));
+        }
+        [HttpGet]
+        [Route("GetAllWithLang")]
+        public IActionResult GetAll(int PageSize = 4, int PageNumber = 1)
+        {
+            return Ok(_serviceService.GetAllWithoutLang(PageSize, PageNumber));
+        }
+        [HttpGet]
+        [Route("FindByName")]
+        public IActionResult FindByName(string Name)
+        {
+            return Ok(_serviceService.FindByName(Name));
+        }
+
     }
 }
+
+
+
+
