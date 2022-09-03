@@ -10,7 +10,9 @@ namespace ClinicSystem.Models.DTOS.Service {
     public  class ServiceUpdateDTO {
         [Required]
       public decimal Price { get; set; }
+        [Required]
         public string  Note{ get; set; }
+        [Required]
         public IFormFile File { get; set; }
     }
 }

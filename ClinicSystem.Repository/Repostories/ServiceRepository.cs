@@ -41,9 +41,60 @@ namespace ClinicSystem.Repositories.Repostories {
                 return null;
             }
         }
-        public ServiceCreateDTO Update(ServiceUpdateDTO service,string path)
+        public ServiceCreateDTO Update(int Id,ServiceUpdateDTO service)
         {
-            return null;
+            string Note = service.Note,
+                     Path = service.File.FileName;
+            decimal price=service.Price;
+            var entitDb = Find(Id);
+            if (Note != null && Path == null && price <= 0)
+            {
+                entitDb.Notes = Note;
+            }
+            else if (Note == null && Path != null && price <= 0)
+            {
+                entitDb.ImageUrl = Path;
+            }
+            else if (Note == null && Path == null && price > 0)
+            {
+                entitDb.Price = price;
+            }
+            else if (Note != null && Path != null && price <= 0)
+            {
+                entitDb.ImageUrl = Path;
+                entitDb.Notes = Note;
+            }
+            else if (Note == null && Path != null && price > 0)
+            {
+                entitDb.ImageUrl = Path;
+                entitDb.Price = price;
+            }
+            else if (Note != null && Path == null && price > 0)
+            {
+                entitDb.ImageUrl = Path;
+                entitDb.Notes = Note;
+            }else if(Note != null && Path != null && price > 0)
+            {
+                entitDb.ImageUrl = Path;
+                entitDb.Price = price;
+                entitDb.Notes = Note;
+            }
+            else
+            {
+                return null;
+            }
+            entitDb.ModifiedOn = DateTime.Now;
+
+
+            ServiceCreateDTO createDTO = new ServiceCreateDTO()
+            {
+                ArName = entitDb.ArName,
+                EnName = entitDb.EnName,
+                ImageUrl = "/" + Folder.Services.ToString() + "/" + entitDb.ImageUrl,
+                Notes = entitDb.Notes,
+                Price = entitDb.Price
+            };
+            return createDTO;
         }
         public ServiceCreateDTO FindById(int Id)
         {
@@ -53,6 +104,15 @@ namespace ClinicSystem.Repositories.Repostories {
                 var data = _mapper.Map<ServiceCreateDTO>(entity);
                 data.ImageUrl = "/" + Folder.Services.ToString() + "/" + entity.ImageUrl;
                 return data;
+            }
+            return null;
+        }
+        public string FindImag(int Id)
+        {
+            var data = Find(Id);
+            if (data != null && !data.IsDeleted)
+            {
+                return data.ImageUrl;
             }
             return null;
         }

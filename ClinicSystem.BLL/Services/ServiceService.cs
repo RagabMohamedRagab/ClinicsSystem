@@ -81,19 +81,32 @@ namespace ClinicSystem.BLL.Services {
                 response.ErrorMessage=ErrorsCodes.ParameteresNotCorrect.ToString();
                 return response;
             }
-            if (service.File == null)
+            var oldentity = _serviceRepository.FindImag(Id);
+            if (oldentity == null)
             {
-                _serviceRepository.Update(service,null);
+                response.ErrorMessage = ErrorsCodes.InvalidObject.ToString();
+                return response;
             }
-            else
+            var updateEntity = _serviceRepository.Update(Id, service);
+            if(updateEntity != null)
             {
-
-               if(_serviceRepository.Update(service, service.File.FileName) != null)
+                if (service.File != null)
                 {
-
+                    if (_fileService.Remove(oldentity, Folder.Services)) // You Must send image As =>  [Name].Extension
+                    {
+                        _fileService.Create(service.File, Folder.Services);
+                    }
+                }
+                if (_unit.Commit() > 0)
+                {
+                    response.ErrorMessage = ErrorsCodes.Success.ToString();
+                    response.Data = updateEntity;
+                    return response;
                 }
             }
-            return null;
+            response.ErrorMessage= ErrorsCodes.InvalidUpadte.ToString();
+            return response;
+       
         }
         public ResponseObject FindById(int Id)
         {
