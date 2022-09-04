@@ -100,7 +100,7 @@ namespace ClinicSystem.DAL.Migrations
                         .HasMaxLength(200)
                         .HasColumnType("nvarchar(200)");
 
-                    b.Property<int>("Gender")
+                    b.Property<int?>("GenderId")
                         .HasColumnType("int");
 
                     b.Property<string>("ImgUrl")
@@ -159,6 +159,8 @@ namespace ClinicSystem.DAL.Migrations
                     b.HasIndex("CountryId");
 
                     b.HasIndex("DepartId");
+
+                    b.HasIndex("GenderId");
 
                     b.HasIndex("NormalizedEmail")
                         .HasDatabaseName("EmailIndex");
@@ -660,6 +662,40 @@ namespace ClinicSystem.DAL.Migrations
                     b.ToTable("FoodSystems");
                 });
 
+            modelBuilder.Entity("ClinicSystem.DAL.Domains.Gender", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("ArGender")
+                        .IsRequired()
+                        .HasMaxLength(120)
+                        .HasColumnType("nvarchar(120)");
+
+                    b.Property<DateTime>("CraetedOn")
+                        .HasColumnType("datetime2(7)");
+
+                    b.Property<DateTime?>("DeletedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("EnGender")
+                        .IsRequired()
+                        .HasMaxLength(120)
+                        .HasColumnType("nvarchar(120)");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime?>("ModifiedOn")
+                        .HasColumnType("datetime2(7)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Genders");
+                });
+
             modelBuilder.Entity("ClinicSystem.DAL.Domains.Package", b =>
                 {
                     b.Property<int>("Id")
@@ -772,7 +808,7 @@ namespace ClinicSystem.DAL.Migrations
                         .HasMaxLength(200)
                         .HasColumnType("nvarchar(200)");
 
-                    b.Property<int>("Gender")
+                    b.Property<int?>("GenderId")
                         .HasColumnType("int");
 
                     b.Property<int>("Insurancenumber")
@@ -809,6 +845,8 @@ namespace ClinicSystem.DAL.Migrations
                         .HasColumnType("nvarchar(20)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("GenderId");
 
                     b.ToTable("Patients");
                 });
@@ -1141,11 +1179,17 @@ namespace ClinicSystem.DAL.Migrations
                         .WithMany("Users")
                         .HasForeignKey("DepartId");
 
+                    b.HasOne("ClinicSystem.DAL.Domains.Gender", "Gender")
+                        .WithMany()
+                        .HasForeignKey("GenderId");
+
                     b.Navigation("City");
 
                     b.Navigation("Country");
 
                     b.Navigation("DepartMent");
+
+                    b.Navigation("Gender");
                 });
 
             modelBuilder.Entity("ClinicSystem.DAL.Domains.Appointment", b =>
@@ -1236,6 +1280,15 @@ namespace ClinicSystem.DAL.Migrations
                         .HasForeignKey("PackageId");
 
                     b.Navigation("Package");
+                });
+
+            modelBuilder.Entity("ClinicSystem.DAL.Domains.Patient", b =>
+                {
+                    b.HasOne("ClinicSystem.DAL.Domains.Gender", "Gender")
+                        .WithMany()
+                        .HasForeignKey("GenderId");
+
+                    b.Navigation("Gender");
                 });
 
             modelBuilder.Entity("ClinicSystem.DAL.Domains.PatientDrug", b =>

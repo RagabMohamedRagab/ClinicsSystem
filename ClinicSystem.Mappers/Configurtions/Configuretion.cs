@@ -23,6 +23,8 @@ namespace ClinicSystem.Helpers.Configurtions {
             services.AddTransient<ICountryRepository, CountryRepository>();
             services.AddScoped<ICityRespostory,CityRespostory>();
             services.AddScoped<IServiceRepository, ServiceRepository>();
+            services.AddScoped<IGenderRepository, GenderRepository>();
+
             #endregion
             #region Services
             services.AddTransient<IDepartMentService, DepartMentService>();
@@ -30,6 +32,7 @@ namespace ClinicSystem.Helpers.Configurtions {
             services.AddTransient<ICountryService, CountryService>();
             services.AddTransient<ICityService, CityService>();
             services.AddTransient<IServiceService, ServiceService>();
+            services.AddTransient<IGenderService,GenderService>();
             #endregion
             return services;
         }

@@ -26,6 +26,8 @@ namespace ClinicSystem.DAL.Domains {
         public DateTime DateOfBirth { get; set; }
         [MaxLength(200)]
         public string LandLine { get; set; }
+        [ForeignKey(nameof(Gender))]
+        public int? GenderId { get; set; }
         public virtual Gender Gender { get; set; }
         public int AccountNumber { get; set; }
         [MaxLength(200)]

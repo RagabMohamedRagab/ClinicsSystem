@@ -32,6 +32,7 @@ namespace ClinicSystem.DAL.Context {
       public virtual DbSet<PatientDrug> PatientDrugs { get; set; }
       public virtual DbSet<Service> Services { get; set; }
         public virtual DbSet<Shift> Shifts { get; set; }
+        public virtual DbSet<Gender>Genders { get; set; }
  
         public virtual DbSet<Ray> Rays { get; set; }
        
