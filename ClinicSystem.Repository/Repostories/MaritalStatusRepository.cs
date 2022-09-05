@@ -90,5 +90,23 @@ namespace ClinicSystem.Repositories.Repostories {
             }
             return null;
         }
+        public MaritalStatusDTO FindById(int Id)
+        {
+            var data = Find(Id);
+            if (data != null && !data.IsDeleted)
+            {
+                return _mapper.Map<MaritalStatusDTO>(data);
+            }
+            return null;
+        }
+        public IEnumerable<MaritalStatusDTO> FindByName(string Name)
+        {
+            var maritalStatuses = GetAll().Where(b => !b.IsDeleted);
+            if (maritalStatuses.Any())
+            {
+                return _mapper.Map<IEnumerable<MaritalStatusDTO>>(maritalStatuses.Where(b => b.ArName.ToLower().Contains(Name.ToLower()) || b.EnName.ToLower().Contains(Name.ToLower())));
+            }
+            return null;
+        }
     }
 }

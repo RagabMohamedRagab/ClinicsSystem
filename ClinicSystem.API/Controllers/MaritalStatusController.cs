@@ -44,6 +44,18 @@ namespace ClinicSystem.API.Controllers {
         {
             return Ok(_maritalStatus.Delete(Id));
         }
+        [HttpGet]
+        [Route("FindById")]
+        public IActionResult FindById(int Id)
+        {
+            return Ok(_maritalStatus.FindById(Id));
+        }
+        [HttpGet]
+        [Route("FindbyName")]
+        public IActionResult FindByName(string Name)
+        {
+            return Ok(_maritalStatus.FindByName(Name));
+        }
 
     }
 }

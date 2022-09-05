@@ -13,6 +13,7 @@ namespace ClinicSystem.BOL.IRepositories {
         IEnumerable<MaritalStatusDTO> GetALL(int Pagesize = 4, int PageNumber = 1);
         IEnumerable<AllMaritalStatusDTO> GetALLByLang(string Lang = "en", int Pagesize = 4, int PageNumber = 1);
         MaritalStatusDTO Delete(int Id);
-
+        MaritalStatusDTO FindById(int Id);
+        IEnumerable<MaritalStatusDTO> FindByName(string Name);
     }
 }

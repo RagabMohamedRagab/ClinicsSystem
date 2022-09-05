@@ -153,6 +153,42 @@ namespace ClinicSystem.BLL.Services {
             response.ErrorMessage = ErrorsCodes.NotFound.ToString();
             return response;
         }
+        public ResponseObject FindById(int Id)
+        {
+            ResponseObject response = new ResponseObject();
+            if (Id <= 0)
+            {
+                response.ErrorMessage = ErrorsCodes.IDNotValid.ToString();
+                return response;
+            }
+            var entity = _statusRepository.FindById(Id);
+            if (entity == null)
+            {
+                response.ErrorMessage = ErrorsCodes.NotFound.ToString();
+                return response;
+            }
+            response.ErrorMessage = ErrorsCodes.Success.ToString();
+            response.Data = entity;
+            return response;
+        }
+        public ResponseObject FindByName(string Name)
+        {
+            ResponseObject response = new ResponseObject();
+            if (String.IsNullOrEmpty(Name))
+            {
+                response.ErrorMessage = ErrorsCodes.ParameteresNotCorrect.ToString();
+                return response;
+            }
+            var data = _statusRepository.FindByName(Name);
+            if (data.Any())
+            {
+                response.ErrorMessage = ErrorsCodes.Success.ToString();
+                response.Data = data;
+                return response;
+            }
+            response.ErrorMessage = ErrorsCodes.NotFound.ToString();
+            return response;
+        }
     }
 }
 
