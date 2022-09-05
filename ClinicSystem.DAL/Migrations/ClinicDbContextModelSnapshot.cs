@@ -696,6 +696,40 @@ namespace ClinicSystem.DAL.Migrations
                     b.ToTable("Genders");
                 });
 
+            modelBuilder.Entity("ClinicSystem.DAL.Domains.MaritalStatus", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("ArName")
+                        .IsRequired()
+                        .HasMaxLength(120)
+                        .HasColumnType("nvarchar(120)");
+
+                    b.Property<DateTime>("CraetedOn")
+                        .HasColumnType("datetime2(7)");
+
+                    b.Property<DateTime?>("DeletedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("EnName")
+                        .IsRequired()
+                        .HasMaxLength(120)
+                        .HasColumnType("nvarchar(120)");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime?>("ModifiedOn")
+                        .HasColumnType("datetime2(7)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("MaritalStatuses");
+                });
+
             modelBuilder.Entity("ClinicSystem.DAL.Domains.Package", b =>
                 {
                     b.Property<int>("Id")
@@ -817,7 +851,7 @@ namespace ClinicSystem.DAL.Migrations
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
-                    b.Property<int>("MaritalStatus")
+                    b.Property<int?>("MaritalStatusId")
                         .HasColumnType("int");
 
                     b.Property<DateTime?>("ModifiedOn")
@@ -847,6 +881,8 @@ namespace ClinicSystem.DAL.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("GenderId");
+
+                    b.HasIndex("MaritalStatusId");
 
                     b.ToTable("Patients");
                 });
@@ -1288,7 +1324,13 @@ namespace ClinicSystem.DAL.Migrations
                         .WithMany()
                         .HasForeignKey("GenderId");
 
+                    b.HasOne("ClinicSystem.DAL.Domains.MaritalStatus", "MaritalStatus")
+                        .WithMany()
+                        .HasForeignKey("MaritalStatusId");
+
                     b.Navigation("Gender");
+
+                    b.Navigation("MaritalStatus");
                 });
 
             modelBuilder.Entity("ClinicSystem.DAL.Domains.PatientDrug", b =>

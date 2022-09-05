@@ -4,6 +4,7 @@ using ClinicSystem.Models.DTOS.City;
 using ClinicSystem.Models.DTOS.Country;
 using ClinicSystem.Models.DTOS.Department;
 using ClinicSystem.Models.DTOS.Gender;
+using ClinicSystem.Models.DTOS.MaritalStatus;
 using ClinicSystem.Models.DTOS.Service;
 using System;
 using System.Collections.Generic;
@@ -38,6 +39,10 @@ namespace ClinicSystem.Mappers.Mapper {
             #region Genders
             CreateMap<Gender, GenderDTO>().ReverseMap();
             CreateMap<Gender, GenderByName>().ReverseMap();
+            #endregion
+            #region MaritalStatus
+            CreateMap<MaritalStatus, MaritalStatusDTO>().ReverseMap();
+            CreateMap<MaritalStatus, AllMaritalStatusDTO>().ReverseMap();
             #endregion
         }
     }

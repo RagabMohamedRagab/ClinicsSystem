@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -34,7 +35,11 @@ namespace ClinicSystem.DAL.Domains {
         public string Address { get; set; }
         [MaxLength(200)]
         public string Note { get; set; }
+        [ForeignKey(nameof(Gender))]
+        public int? GenderId { get; set; }
         public virtual Gender Gender { get; set; }
+        [ForeignKey(nameof(MaritalStatus))]
+        public int? MaritalStatusId { get; set; }
         public virtual MaritalStatus MaritalStatus { get; set; }
         public virtual ICollection<Appointment> Appointments { get; set; } 
         public virtual ICollection<FoodSystem> FoodSystems { get; set; }
