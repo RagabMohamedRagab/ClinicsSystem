@@ -5,6 +5,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.Identity.Core" Version="5.0.17" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\ClinicSystem.BOL\ClinicSystem.BOL.csproj" />
     <ProjectReference Include="..\ClinicSystem.DAL\ClinicSystem.DAL.csproj" />
     <ProjectReference Include="..\ClinicSystem.Models\ClinicSystem.Models.csproj" />

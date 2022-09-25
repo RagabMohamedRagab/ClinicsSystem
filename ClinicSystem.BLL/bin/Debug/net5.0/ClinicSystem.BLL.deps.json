@@ -1482,7 +1482,9 @@
         "dependencies": {
           "ClinicSystem.BOL": "1.0.0",
           "ClinicSystem.DAL": "1.0.0",
-          "ClinicSystem.Models": "1.0.0"
+          "ClinicSystem.Models": "1.0.0",
+          "Microsoft.AspNetCore.Identity": "2.2.0",
+          "Microsoft.Extensions.Identity.Core": "5.0.17"
         },
         "runtime": {
           "ClinicSystem.Repositories.dll": {}

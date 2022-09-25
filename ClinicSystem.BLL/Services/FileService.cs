@@ -49,7 +49,7 @@ namespace ClinicSystem.BLL.Services {
                     return fileName; 
                 }
             }
-            return null;
+            return "Image-Not-Found .png";
         }
 
         public bool Find(string path, Folder Type)

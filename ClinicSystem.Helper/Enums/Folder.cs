@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 namespace ClinicSystem.Helpers.Enums {
     public enum Folder {
         Countries = 0,
-        Services=1
+        Services=1,
+        Accounts=2
     }
 }

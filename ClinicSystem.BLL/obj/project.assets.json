@@ -1994,7 +1994,9 @@
         "dependencies": {
           "ClinicSystem.BOL": "1.0.0",
           "ClinicSystem.DAL": "1.0.0",
-          "ClinicSystem.Models": "1.0.0"
+          "ClinicSystem.Models": "1.0.0",
+          "Microsoft.AspNetCore.Identity": "2.2.0",
+          "Microsoft.Extensions.Identity.Core": "5.0.17"
         },
         "compile": {
           "bin/placeholder/ClinicSystem.Repositories.dll": {}
@@ -6873,7 +6875,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.108\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.109\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -24,7 +24,8 @@ namespace ClinicSystem.Helpers.Configurtions {
             services.AddScoped<ICityRespostory,CityRespostory>();
             services.AddScoped<IServiceRepository, ServiceRepository>();
             services.AddScoped<IGenderRepository, GenderRepository>();
-            services.AddScoped<IMaritalStatusRepository,MaritalStatusRepository>();
+            services.AddScoped<IMaritalStatusRepository,MaritalStatusRepository>();     
+            services.AddTransient<IAccountRepository, AccountRepository>();
 
             #endregion
             #region Services
@@ -35,6 +36,7 @@ namespace ClinicSystem.Helpers.Configurtions {
             services.AddTransient<IServiceService, ServiceService>();
             services.AddTransient<IGenderService,GenderService>();
             services.AddTransient<IMaritalStatusService,MaritalStatusService>();
+            services.AddTransient<IAccountService, AccountService>();
             #endregion
             return services;
         }

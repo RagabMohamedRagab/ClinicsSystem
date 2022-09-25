@@ -1,10 +1,12 @@
 ﻿using AutoMapper;
 using ClinicSystem.DAL.Domains;
+using ClinicSystem.Models.DTOS.Accounts;
 using ClinicSystem.Models.DTOS.City;
 using ClinicSystem.Models.DTOS.Country;
 using ClinicSystem.Models.DTOS.Department;
 using ClinicSystem.Models.DTOS.Gender;
 using ClinicSystem.Models.DTOS.MaritalStatus;
+
 using ClinicSystem.Models.DTOS.Service;
 using System;
 using System.Collections.Generic;
@@ -43,6 +45,19 @@ namespace ClinicSystem.Mappers.Mapper {
             #region MaritalStatus
             CreateMap<MaritalStatus, MaritalStatusDTO>().ReverseMap();
             CreateMap<MaritalStatus, AllMaritalStatusDTO>().ReverseMap();
+            #endregion
+            #region Registers
+            CreateMap<ApplicationUser, RegisterVM>()
+                .ForMember(des => des.FullName, src => src.MapFrom(b => b.FullName))
+                .ForMember(des=>des.Eamil,src=>src.MapFrom(b=>b.UserName))
+                .ForMember(des => des.NationalID, src => src.MapFrom(b => b.NationalID))
+                .ForMember(des => des.BirthDate, src => src.MapFrom(b => b.DateOfBirth))
+                .ForMember(des => des.Phone, src => src.MapFrom(b => b.PhoneNumber))
+                .ForMember(des => des.GenderId, src => src.MapFrom(b => b.GenderId))
+                .ForMember(des => des.CountryId, src => src.MapFrom(b => b.CountryId))
+                .ForMember(des => des.CityId, src => src.MapFrom(b => b.CityId))
+                .ForMember(des => des.Eamil, src => src.MapFrom(b => b.Email))
+                .ForMember(des => des.Password, src => src.MapFrom(b => b.PasswordHash)).ReverseMap();
             #endregion
         }
     }

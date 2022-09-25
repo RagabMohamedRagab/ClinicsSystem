@@ -18,6 +18,7 @@ namespace ClinicSystem.Helpers.Enums{
         ExtentioPNGANDJPG=9,
         InvalidDelete = 10,
         NotFound=11,
-        InvalidAdd=12
+        InvalidAdd=12,
+        InCorrectDataInsering=13
     }
 }

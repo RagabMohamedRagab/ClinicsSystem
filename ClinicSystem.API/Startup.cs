@@ -36,13 +36,22 @@ namespace ClinicSystem.API {
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
-        {
-      
-            services.AddIdentity<ApplicationUser, IdentityRole>().AddEntityFrameworkStores<ClinicDbContext>().AddDefaultTokenProviders();
-            services.AddDbContext<ClinicDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("Clinic")));
+        {  
+            services.AddControllers();
+            services.AddDbContext<ClinicDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("Clinic")));  
             services.AddAutoMapper(typeof(Automapper));
             Configuretion.RegisterServiceDependencies(services);
-            services.AddControllers();
+            services.AddIdentity<ApplicationUser, IdentityRole>(options =>
+            {
+                options.Password.RequiredLength = 10;
+                options.Password.RequireUppercase = true;
+                options.Password.RequiredUniqueChars = 3;
+                options.Password.RequireNonAlphanumeric = true;
+                options.Password.RequireDigit = true;
+                options.Password.RequireLowercase = true;
+                options.Password.RequireUppercase = true;
+            }).AddEntityFrameworkStores<ClinicDbContext>().AddDefaultTokenProviders();
+         
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo

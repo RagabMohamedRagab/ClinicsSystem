@@ -21,9 +21,11 @@
     <ProjectReference Include="..\ClinicSystem.BOL\ClinicSystem.BOL.csproj" />
     <ProjectReference Include="..\ClinicSystem.DAL\ClinicSystem.DAL.csproj" />
     <ProjectReference Include="..\ClinicSystem.Mappers\ClinicSystem.Mappers.csproj" />
+
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="wwwroot\Accounts\" />
     <Folder Include="wwwroot\Countries\" />
   </ItemGroup>
 
