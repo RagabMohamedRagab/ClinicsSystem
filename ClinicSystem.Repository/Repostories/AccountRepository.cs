@@ -32,7 +32,7 @@ namespace ClinicSystem.Repositories.Repostories {
                 if (user != null)
                 {
                     user.ImgUrl = Path;
-                    if (!EmailExist(user.Email).Result)
+                    if (! EmailExist(user.Email).Result)
                     {
                         IdentityResult result = await _userManager.CreateAsync(user, model.Password);
                         if (result.Succeeded)

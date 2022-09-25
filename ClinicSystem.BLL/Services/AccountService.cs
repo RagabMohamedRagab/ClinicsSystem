@@ -34,10 +34,10 @@ namespace ClinicSystem.BLL.Services {
             try
             {
                 string path=   _fileService.Create(model.Photo, Folder.Accounts);
-                var user = _accountRepository.Create(model,path);
+                var user = _accountRepository.Create(model,path).Result;
                 if (user != null)
                 {
-                    if (_unit.Commit() > 0)
+                    if (_unit.Commit() >=0)
                     {
                         response.ErrorMessage = ErrorsCodes.Success.ToString();
                         response.Data = user;
